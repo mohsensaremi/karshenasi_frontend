@@ -34,8 +34,9 @@ export default ({name, url, query}) => compose(
                 setData,
             } = this.props;
             const tableFetch = this.props[name];
+            const prevTableFetch = prevProps && prevProps[name];
 
-            if (prevProps && prevProps.tableFetch.fulfilled !== tableFetch.fulfilled && tableFetch.fulfilled && tableFetch.value && tableFetch.value.data) {
+            if (prevTableFetch && prevTableFetch.fulfilled !== tableFetch.fulfilled && tableFetch.value && tableFetch.value.data) {
                 if (tableFetch.value.data.data) {
                     setData(tableFetch.value.data.data);
                 }
