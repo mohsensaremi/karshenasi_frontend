@@ -74,6 +74,7 @@ const List = (props) => {
                                             classes={{
                                                 root: classes.item,
                                             }}
+                                            openSubmitDialog={openSubmitDialog}
                                         />
                                     );
                                 })

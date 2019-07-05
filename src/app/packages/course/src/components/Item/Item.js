@@ -12,6 +12,8 @@ const Item = (props) => {
     const {
         classes,
         title,
+        openSubmitDialog,
+        data,
     } = props;
 
     return (
@@ -35,6 +37,7 @@ const Item = (props) => {
                         <Grid item>
                             <IconButton
                                 size={"small"}
+                                onClick={() => openSubmitDialog(data)}
                             >
                                 <EditIcon/>
                             </IconButton>
