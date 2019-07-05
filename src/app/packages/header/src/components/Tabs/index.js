@@ -1,7 +1,7 @@
 import {compose} from "recompose";
 import style from './style';
-import Toolbar from './Toolbar';
+import Tabs from './Tabs';
 
 export default compose(
     style,
-)(Toolbar);
+)(Tabs);

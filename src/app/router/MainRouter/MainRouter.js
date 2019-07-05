@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import LoadMe from 'app/packages/auth/src/containers/LoadMe';
 import classnames from 'classnames';
 import Toolbar from 'app/packages/header/src/containers/Toolbar';
+import Tabs from 'app/packages/header/src/containers/Tabs';
 
 const MainRouter = (props) => {
 
@@ -18,7 +19,14 @@ const MainRouter = (props) => {
             {
                 me && (
                     <React.Fragment>
-                        <Toolbar/>
+                        <Toolbar
+                            classes={{
+                                root: classes.toolbar,
+                            }}
+                        />
+                        <div className={classes.limitWidth}>
+                            <Tabs/>
+                        </div>
                     </React.Fragment>
                 )
             }
