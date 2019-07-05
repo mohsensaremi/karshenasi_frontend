@@ -10,7 +10,7 @@ export default withStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.dark,
         padding: theme.spacing.unit * 2,
         flexDirection: 'column',
         boxSizing: 'border-box',

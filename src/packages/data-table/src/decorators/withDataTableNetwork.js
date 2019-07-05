@@ -20,7 +20,7 @@ export default ({name, url, query}) => compose(
         return {
             [name]: `${url || props.url}?${qs}`,
             [`${name}Fn`]: () => ({
-                tableFetch: {
+                [name]: {
                     url: `${url || props.url}?${qs}`,
                     force: true,
                 },

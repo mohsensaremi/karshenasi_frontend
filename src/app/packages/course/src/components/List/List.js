@@ -2,15 +2,17 @@ import React from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import SubmitDialog from '../../containers/SubmitDialog';
 
 const List = (props) => {
 
     const {
         classes,
         listFetch,
+        listFetchFn,
         data,
+        openSubmitDialog,
     } = props;
-    console.log("props", props);
 
     return (
         <div className={classes.root}>
@@ -28,22 +30,37 @@ const List = (props) => {
                                 variant={"contained"}
                                 color={"primary"}
                                 className={classes.hintButton}
+                                onClick={() => openSubmitDialog({})}
                             >
                                 اولین کلاس خود را بسازید
                             </Button>
                         </Typography>
                     ) : (
-                        data.map(item => {
+                        <div>
+                            <Button
+                                variant={"contained"}
+                                color={"primary"}
+                                onClick={() => openSubmitDialog({})}
+                            >
+                                کلاس جدید
+                            </Button>
+                            {
+                                data.map(item => {
 
-                            return (
-                                <div key={item.id}>
-                                    {item.title}
-                                </div>
-                            );
-                        })
+                                    return (
+                                        <div key={item.id}>
+                                            {item.title}
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
                     )
                 )
             }
+            <SubmitDialog
+                onSuccess={() => listFetchFn()}
+            />
         </div>
     );
 }
