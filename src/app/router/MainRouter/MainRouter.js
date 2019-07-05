@@ -26,7 +26,11 @@ const MainRouter = (props) => {
                             }}
                         />
                         <div className={classes.limitWidth}>
-                            <Tabs/>
+                            <Tabs
+                                classes={{
+                                    root: classes.tabs,
+                                }}
+                            />
                             <Switch>
                                 <Route exact path={'/courses'} component={CourseList}/>
                                 <Redirect to={"/courses"}/>

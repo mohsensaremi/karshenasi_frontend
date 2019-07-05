@@ -8,4 +8,7 @@ export default withStyles(theme => ({
     toolbar: {
         marginBottom: theme.spacing(2),
     },
+    tabs: {
+        marginBottom: theme.spacing(2),
+    },
 }), {flip: false});

@@ -2,26 +2,26 @@ import {compose, lifecycle} from "recompose";
 import network from 'app/network';
 import {buildQueryString} from 'utils/utils/url';
 
-export default ({name, url, query}) => compose(
+export default ({name, url, query, searchColumns}) => compose(
     network(props => {
-
         const s = {
             ...props.settings,
             ...query,
             ...props.query,
         };
-        if (props.search && props.searchColumns) {
+        if (props.search && (searchColumns || props.searchColumns)) {
             s.search = props.search;
-            s.searchColumns = props.searchColumns.join('&searchColumns=');
+            s.searchColumns = (searchColumns || props.searchColumns).join('&searchColumns=');
         }
 
         const qs = buildQueryString(s);
+        const requestUrl = `${url || props.url}?${qs}`;
 
         return {
-            [name]: `${url || props.url}?${qs}`,
+            [name]: requestUrl,
             [`${name}Fn`]: () => ({
                 [name]: {
-                    url: `${url || props.url}?${qs}`,
+                    url: requestUrl,
                     force: true,
                 },
             }),

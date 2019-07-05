@@ -9,6 +9,7 @@ export default compose(
     withDataTableNetwork({
         name: "listFetch",
         url: "/course/owned-courses",
+        searchColumns: ["title"],
     }),
     store,
 )(List);
