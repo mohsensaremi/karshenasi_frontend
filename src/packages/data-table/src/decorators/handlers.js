@@ -7,6 +7,12 @@ const mergeSettings = (newSettings) => (settings) => ({
 });
 
 export default withHandlers({
+    onNextPage: ({settings, setSettings}) => () => {
+        setSettings(mergeSettings({skip: settings.skip + settings.limit}));
+    },
+    onPrevPage: ({settings, setSettings}) => () => {
+        setSettings(mergeSettings({skip: settings.skip - settings.limit}));
+    },
     onChangePage: ({settings, setSettings}) => (event, page) => {
         setSettings(mergeSettings({skip: page * settings.limit}));
     },

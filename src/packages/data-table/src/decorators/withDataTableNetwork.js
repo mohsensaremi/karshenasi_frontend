@@ -1,26 +1,28 @@
-import {compose, lifecycle} from "recompose";
+import {compose, lifecycle, defaultProps} from "recompose";
 import network from 'app/network';
 import {buildQueryString} from 'utils/utils/url';
 
-export default ({name, url, query, searchColumns}) => compose(
+export default compose(
+    defaultProps({
+        paging: "set",
+    }),
     network(props => {
         const s = {
             ...props.settings,
-            ...query,
             ...props.query,
         };
-        if (props.search && (searchColumns || props.searchColumns)) {
+        if (props.search && props.searchColumns) {
             s.search = props.search;
-            s.searchColumns = (searchColumns || props.searchColumns).join('&searchColumns=');
+            s.searchColumns = props.searchColumns.join('&searchColumns=');
         }
 
         const qs = buildQueryString(s);
-        const requestUrl = `${url || props.url}?${qs}`;
+        const requestUrl = `${props.url}?${qs}`;
 
         return {
-            [name]: requestUrl,
-            [`${name}Fn`]: () => ({
-                [name]: {
+            [props.name]: requestUrl,
+            [`${props.name}Fn`]: () => ({
+                [props.name]: {
                     url: requestUrl,
                     force: true,
                 },
@@ -32,13 +34,21 @@ export default ({name, url, query, searchColumns}) => compose(
             const {
                 setTotal,
                 setData,
+                paging,
             } = this.props;
-            const tableFetch = this.props[name];
-            const prevTableFetch = prevProps && prevProps[name];
+            const tableFetch = this.props[this.props.name];
+            const prevTableFetch = prevProps && prevProps[this.props.name];
 
             if (prevTableFetch && prevTableFetch.fulfilled !== tableFetch.fulfilled && tableFetch.value && tableFetch.value.data) {
                 if (tableFetch.value.data.data) {
-                    setData(tableFetch.value.data.data);
+                    const newData = tableFetch.value.data.data;
+                    if (paging === "set") {
+                        setData(newData);
+                    } else if (paging === "append") {
+                        setData(x => ([...x, ...newData]));
+                    } else if (paging === "prepend") {
+                        setData(x => ([...newData, ...x]));
+                    }
                 }
                 if (tableFetch.value.data.total) {
                     setTotal(tableFetch.value.data.total);

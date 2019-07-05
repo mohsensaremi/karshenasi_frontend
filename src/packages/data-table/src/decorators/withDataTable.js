@@ -1,4 +1,4 @@
-import {compose, withState} from "recompose";
+import {compose, withState, withProps} from "recompose";
 import handlers from './handlers';
 
 export default compose(
@@ -13,4 +13,7 @@ export default compose(
         limit: props.limit || 25,
     })),
     handlers,
+    withProps(props => ({
+        hasNext: props.total - (props.settings.skip + props.settings.limit) > 0,
+    })),
 );

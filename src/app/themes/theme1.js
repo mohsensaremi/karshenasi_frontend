@@ -21,6 +21,9 @@ let theme = createMuiTheme({
             lineHeight: '24px',
         }
     },
+    shape: {
+        borderRadius: 10,
+    },
 });
 
 theme = {
@@ -46,6 +49,11 @@ theme = {
         },
     },
     overrides: {
+        MuiPaper: {
+            rounded: {
+                overflow: 'hidden',
+            },
+        },
         MuiDialogActions: {
             root: {
                 margin: 0,

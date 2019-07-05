@@ -17,6 +17,8 @@ const List = (props) => {
         openSubmitDialog,
         onChangeSearch,
         searchInput,
+        onNextPage,
+        hasNext,
     } = props;
 
     console.log("listFetch", listFetch);
@@ -44,44 +46,56 @@ const List = (props) => {
                 </Grid>
             </div>
             {
-                listFetch.pending ? (
+                !searchInput && data.length === 0 ? (
+                    <Typography color={"textSecondary"} className={classes.hint}>
+                        شما هیچ کلاسی ایجاد نکرده اید
+                        <br/>
+                        <Button
+                            variant={"contained"}
+                            color={"primary"}
+                            className={classes.hintButton}
+                            onClick={() => openSubmitDialog({})}
+                        >
+                            اولین کلاس خود را بسازید
+                        </Button>
+                    </Typography>
+                ) : (
+                    <div>
+                        {
+                            data.map(item => {
+
+                                return (
+                                    <Item
+                                        key={item.id}
+                                        data={item}
+                                        classes={{
+                                            root: classes.item,
+                                        }}
+                                        openSubmitDialog={openSubmitDialog}
+                                    />
+                                );
+                            })
+                        }
+                    </div>
+                )
+            }
+            {
+                listFetch.pending && (
                     <div className={classes.loading}>
                         <CircularProgress/>
                     </div>
-                ) : (
-                    !searchInput && data.length === 0 ? (
-                        <Typography color={"textSecondary"} className={classes.hint}>
-                            شما هیچ کلاسی ایجاد نکرده اید
-                            <br/>
-                            <Button
-                                variant={"contained"}
-                                color={"primary"}
-                                className={classes.hintButton}
-                                onClick={() => openSubmitDialog({})}
-                            >
-                                اولین کلاس خود را بسازید
-                            </Button>
-                        </Typography>
-                    ) : (
-                        <div>
-                            {
-                                data.map(item => {
-
-                                    return (
-                                        <Item
-                                            key={item.id}
-                                            data={item}
-                                            classes={{
-                                                root: classes.item,
-                                            }}
-                                            openSubmitDialog={openSubmitDialog}
-                                        />
-                                    );
-                                })
-                            }
-                        </div>
-                    )
-
+                )
+            }
+            {
+                hasNext && (
+                    <Button
+                        fullWidth
+                        onClick={onNextPage}
+                        disabled={listFetch.pending}
+                        color={"primary"}
+                    >
+                        بیشتر
+                    </Button>
                 )
             }
             <SubmitDialog
