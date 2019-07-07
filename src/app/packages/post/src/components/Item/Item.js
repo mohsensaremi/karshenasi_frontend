@@ -39,7 +39,7 @@ const Item = (props) => {
                                         component={Link}
                                         to={`/course/${id}`}
                                     >
-                                        ورود به کلاس
+                                        جزییات
                                     </Button>
                                 </Grid>
                                 <Grid item>
