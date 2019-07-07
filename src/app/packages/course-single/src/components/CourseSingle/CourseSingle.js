@@ -10,6 +10,8 @@ import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Collapse from '@material-ui/core/Collapse';
 import {Link} from 'react-router-dom';
+import SubmitDialog from "app/packages/course/src/containers/SubmitDialog";
+import pick from 'lodash/pick';
 
 const CourseSingle = (props) => {
 
@@ -18,6 +20,9 @@ const CourseSingle = (props) => {
         title,
         user,
         me,
+        onSubmitSuccess,
+        openSubmitDialog,
+        data,
     } = props;
 
     const [detailExpand, setDetailExpand] = useState(false);
@@ -30,10 +35,11 @@ const CourseSingle = (props) => {
                         <SchoolIcon fontSize={"inherit"} className={classes.titleIcon}/>
                         {title}
                         {
-                            me.get('id') === user.id&&(
+                            me.get('id') === user.id && (
                                 <div className={classes.actions}>
                                     <IconButton
                                         size={"small"}
+                                        onClick={() => openSubmitDialog(pick(data, ['id', 'title', 'hasPassword']))}
                                     >
                                         <EditIcon/>
                                     </IconButton>
@@ -88,6 +94,9 @@ const CourseSingle = (props) => {
                     </tr>
                 </table>
             </Collapse>
+            <SubmitDialog
+                onSuccess={onSubmitSuccess}
+            />
         </Paper>
     );
 }
