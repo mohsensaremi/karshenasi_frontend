@@ -21,7 +21,10 @@ export default compose(
         const requestUrl = `${props.url}?${qs}`;
 
         return {
-            [props.name]: requestUrl,
+            [props.name]: {
+                url: requestUrl,
+                xx: "zz",
+            },
             [`${props.name}Fn`]: () => ({
                 [props.name]: {
                     url: requestUrl,
@@ -42,6 +45,8 @@ export default compose(
                 setTotal,
                 setData,
                 paging,
+                searchingState,
+                setSearchingState,
             } = this.props;
             const tableFetch = this.props[this.props.name];
             const prevTableFetch = prevProps && prevProps[this.props.name];
@@ -49,7 +54,10 @@ export default compose(
             if (prevTableFetch && prevTableFetch.fulfilled !== tableFetch.fulfilled && tableFetch.value && tableFetch.value.data) {
                 if (tableFetch.value.data.data) {
                     const newData = tableFetch.value.data.data;
-                    if (paging === "set") {
+                    if (searchingState) {
+                        setSearchingState(false);
+                        setData(newData);
+                    } else if (paging === "set") {
                         setData(newData);
                     } else if (paging === "append") {
                         setData(x => ([...x, ...newData]));

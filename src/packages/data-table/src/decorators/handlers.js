@@ -29,13 +29,13 @@ export default withHandlers({
 
         setSettings(mergeSettings({order, orderBy}));
     },
-    onChangeSearch: ({setSearch, setSearchInput}) => (e) => {
+    onChangeSearch: ({setSearch, setSearchInput, setSearchingState}) => (e) => {
         const value = e.target.value;
         setSearchInput(value);
-        setStateDebounced(setSearch, value);
+        setStateDebounced(setSearch, value, () => setSearchingState(true));
     },
 });
 
-const setStateDebounced = debounce((setState, value) => {
-    setState(value);
+const setStateDebounced = debounce((setState, value, then) => {
+    setState(value, then);
 }, 1000);

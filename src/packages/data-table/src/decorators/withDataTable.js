@@ -2,6 +2,7 @@ import {compose, withState} from "recompose";
 import handlers from './handlers';
 
 export default compose(
+    withState('searchingState', 'setSearchingState', false),
     withState('searchInput', 'setSearchInput', ""),
     withState('search', 'setSearch', ""),
     withState('settings', 'setSettings', props => ({
