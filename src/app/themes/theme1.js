@@ -19,7 +19,10 @@ let theme = createMuiTheme({
         fontSize: 12,
         body2: {
             lineHeight: '24px',
-        }
+        },
+        h1: {
+            fontSize: 26,
+        },
     },
     shape: {
         borderRadius: 10,

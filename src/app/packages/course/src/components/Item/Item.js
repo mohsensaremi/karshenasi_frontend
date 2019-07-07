@@ -6,12 +6,14 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
+import {Link} from 'react-router-dom';
 
 const Item = (props) => {
 
     const {
         classes,
         title,
+        id,
         openSubmitDialog,
         data,
     } = props;
@@ -30,6 +32,8 @@ const Item = (props) => {
                             <Button
                                 color={"primary"}
                                 variant={"outlined"}
+                                component={Link}
+                                to={`/course/${id}`}
                             >
                                 ورود به کلاس
                             </Button>

@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import Toolbar from 'app/packages/header/src/containers/Toolbar';
 import Tabs from 'app/packages/header/src/containers/Tabs';
 import CourseList from 'app/packages/course/src/containers/List';
+import CourseSingle from 'app/packages/course-single/src/renderes/CourseSingle';
 
 const MainRouter = (props) => {
 
@@ -33,6 +34,7 @@ const MainRouter = (props) => {
                             />
                             <Switch>
                                 <Route exact path={'/courses'} component={CourseList}/>
+                                <Route exact path={'/course/:id'} component={CourseSingle}/>
                                 <Redirect to={"/courses"}/>
                             </Switch>
                         </div>

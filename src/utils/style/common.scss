@@ -1,0 +1,191 @@
+
+.pac-item,
+.pac-item-query,
+.gm-style,
+input {
+  font-family: 'IRANSans';
+}
+
+.pac-item, .pac-item-query {
+  font-size: 10px;
+}
+
+.jw-display-controls .jw-svg-icon-play path {
+  display: none;
+}
+
+.jw-display-controls .jw-svg-icon-play {
+  background-image: url(../../img/icon/play.png);
+  background-size: 110px 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 110px !important;
+  height: 110px !important;
+}
+
+.jw-display-controls .jw-icon {
+  width: 110px !important;
+  height: 110px !important;
+}
+
+@media (max-width: 1279.95px) {
+
+  .jw-display-controls .jw-svg-icon-play {
+    background-size: 64px 64px;
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .jw-display-controls .jw-icon {
+    width: 64px !important;
+    height: 64px !important;
+  }
+}
+
+@keyframes cd-3d-rotation {
+  0% {
+    transform: perspective(1000px) rotateX(-90deg);
+  }
+  100% {
+    transform: perspective(1000px) translateY(0);
+  }
+}
+
+.shine-effect {
+  overflow: hidden;
+}
+
+.shine-effect:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -200%;
+  width: 200%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background-image: linear-gradient(to right, transparent, rgba(51, 172, 113, 0.5), transparent);
+  animation: shine 6s ease;
+  animation-iteration-count: infinite;
+
+}
+
+@-moz-keyframes shine {
+  100% {
+    right: 600%;
+  }
+}
+
+@-webkit-keyframes shine {
+  100% {
+    right: 600%;
+  }
+}
+
+@-o-keyframes shine {
+  100% {
+    right: 600%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    right: 600%;
+  }
+}
+
+.post-content-in-html-anchor {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #35b995;
+  color: #35b995;
+  text-align: center;
+  border-radius: 10px;
+  transition: all ease-in-out .3s;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.post-content-in-html-anchor:hover {
+  border-color: #4d6faa;
+  color: #4d6faa;
+}
+
+.post-content-in-html-anchor:active,
+.post-content-in-html-anchor:focus {
+  color: #fff;
+}
+
+.lg-backdrop {
+  z-index: 2040;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.lg-outer {
+  z-index: 2050;
+}
+
+.post-user-upload-open {
+  color: #4d6faa;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 468px 0
+  }
+  100% {
+    background-position: -468px 0
+  }
+}
+
+@keyframes placeHolderShimmerLong {
+  0% {
+    background-position: 936px 0
+  }
+  100% {
+    background-position: -936px 0
+  }
+}
+
+.loading-bg {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  position: relative;
+  height: 100%;
+  border-radius: 300px;
+}
+
+.loading-bg.long {
+  animation-name: placeHolderShimmerLong;
+  animation-duration: 2s;
+  background-size: 2000px 104px;
+}
+
+.hScroll {
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  width: 400px;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.hScroll::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
