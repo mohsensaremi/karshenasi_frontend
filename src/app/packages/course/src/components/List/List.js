@@ -12,13 +12,13 @@ const List = (props) => {
     const {
         classes,
         listFetch,
-        listFetchFn,
         data,
         openSubmitDialog,
         onChangeSearch,
         searchInput,
         onNextPage,
         hasNext,
+        onSubmitSuccess,
     } = props;
 
     console.log("listFetch", listFetch);
@@ -99,7 +99,7 @@ const List = (props) => {
                 )
             }
             <SubmitDialog
-                onSuccess={() => listFetchFn()}
+                onSuccess={onSubmitSuccess}
             />
         </div>
     );
