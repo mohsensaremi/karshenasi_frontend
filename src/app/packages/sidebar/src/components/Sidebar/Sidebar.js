@@ -4,8 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
+import SchoolIcon from '@material-ui/icons/School';
+import CastForEducationIcon from '@material-ui/icons/CastForEducation';
+import PersonIcon from '@material-ui/icons/Person';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import {Link} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 
@@ -18,16 +20,20 @@ const Sidebar = (props) => {
 
     const buttons = [
         {
-            children: "کلاس های من",
+            label: "کلاس های من",
+            icon: SchoolIcon,
         },
         {
-            children: "در یک نگاه",
+            label: "در یک نگاه",
+            icon: CastForEducationIcon,
         },
         {
-            children: "ویرایش پروفایل",
+            label: "ویرایش پروفایل",
+            icon: PersonIcon,
         },
         {
-            children: "خروج",
+            label: "خروج",
+            icon: PowerSettingsNewIcon,
         },
     ];
 
@@ -51,13 +57,16 @@ const Sidebar = (props) => {
             <Paper className={classes.paper}>
                 {
                     buttons.map((button, index) => {
+                        const Icon = button.icon;
                         return (
                             <Button
                                 key={index}
                                 fullWidth
                                 className={classes.button}
-                                {...button}
-                            />
+                            >
+                                <Icon className={classes.buttonIcon}/>
+                                {button.label}
+                            </Button>
                         );
                     })
                 }

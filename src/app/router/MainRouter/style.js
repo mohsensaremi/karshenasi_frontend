@@ -6,7 +6,7 @@ export default withStyles(theme => ({
         margin: 'auto',
     },
     toolbar: {
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(3),
     },
     tabs: {
         marginBottom: theme.spacing(2),

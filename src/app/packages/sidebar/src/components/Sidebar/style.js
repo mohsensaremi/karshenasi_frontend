@@ -23,4 +23,8 @@ export default withStyles(theme => ({
     button: {
         justifyContent: 'flex-start',
     },
+    buttonIcon:{
+        color:theme.palette.primary.main,
+        marginLeft:theme.spacing(),
+    },
 }), {flip: false});
