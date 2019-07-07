@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01b1a36f-dd51-48bd-8334-60eacf8cbf43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/router/MainRouter/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/router/MainRouter/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/themes/theme1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/themes/theme1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +29,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/themes/theme1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+            <state relative-caret-position="195">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/Sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="525">
+              <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -90,11 +92,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="177">
+              <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,10 +137,12 @@
       <find>data</find>
       <find>classes</find>
       <find>button</find>
+      <find>red</find>
     </findStrings>
     <replaceStrings>
       <replace>margin={&quot;normal&quot;}</replace>
       <replace>Loading</replace>
+      <replace>pink</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -193,11 +200,11 @@
         <option value="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js" />
         <option value="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/index.js" />
         <option value="$PROJECT_DIR$/src/app/packages/sidebar/src/containers/Sidebar/index.js" />
-        <option value="$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js" />
         <option value="$PROJECT_DIR$/src/app/router/MainRouter/style.js" />
         <option value="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/style.js" />
-        <option value="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/Sidebar.js" />
         <option value="$PROJECT_DIR$/src/app/themes/theme1.js" />
+        <option value="$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/Sidebar.js" />
+        <option value="$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js" />
       </list>
     </option>
   </component>
@@ -366,27 +373,6 @@
               <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="sidebar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="sidebar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Sidebar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -415,13 +401,6 @@
               <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -479,12 +458,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562316110313</updated>
       <workItem from="1562316111806" duration="2415000" />
-      <workItem from="1562498220641" duration="9782000" />
+      <workItem from="1562498220641" duration="9997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20650000" />
+    <option name="totallyTimeSpent" value="20865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -860,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/router/MainRouter/store.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -884,20 +856,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/themes/theme1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/packages/sidebar/src/components/Sidebar/Sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="525">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/themes/theme1.js">
+    <entry file="file://$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        <state relative-caret-position="177">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

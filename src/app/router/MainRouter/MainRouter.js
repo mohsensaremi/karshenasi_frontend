@@ -7,6 +7,7 @@ import Toolbar from 'app/packages/header/src/containers/Toolbar';
 import Sidebar from 'app/packages/sidebar/src/containers/Sidebar';
 import CourseList from 'app/packages/course/src/containers/List';
 import CourseSingle from 'app/packages/course-single/src/renderes/CourseSingle';
+import {StickyContainer, Sticky} from 'react-sticky';
 
 const MainRouter = (props) => {
 
@@ -27,18 +28,28 @@ const MainRouter = (props) => {
                             }}
                         />
                         <div className={classes.limitWidth}>
-                            <Grid container spacing={2}>
-                                <Grid item xs={12} md={3}>
-                                    <Sidebar/>
+                            <StickyContainer>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12} md={3}>
+                                        <Sticky topOffset={8}>
+                                            {({
+                                                  style,
+                                              }) => (
+                                                <div style={style}>
+                                                    <Sidebar/>
+                                                </div>
+                                            )}
+                                        </Sticky>
+                                    </Grid>
+                                    <Grid item xs={12} md={9}>
+                                        <Switch>
+                                            <Route exact path={'/courses'} component={CourseList}/>
+                                            <Route path={'/course/:id'} component={CourseSingle}/>
+                                            <Redirect to={"/courses"}/>
+                                        </Switch>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs={12} md={9}>
-                                    <Switch>
-                                        <Route exact path={'/courses'} component={CourseList}/>
-                                        <Route path={'/course/:id'} component={CourseSingle}/>
-                                        <Redirect to={"/courses"}/>
-                                    </Switch>
-                                </Grid>
-                            </Grid>
+                            </StickyContainer>
                         </div>
                     </React.Fragment>
                 )

@@ -17,6 +17,7 @@
     "react-refetch": "^2.0.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-sticky": "^6.0.3",
     "recompose": "^0.30.0",
     "redux": "^4.0.1",
     "redux-form": "^8.2.4",
