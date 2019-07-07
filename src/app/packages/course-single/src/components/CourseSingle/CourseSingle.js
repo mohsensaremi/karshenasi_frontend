@@ -9,9 +9,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Collapse from '@material-ui/core/Collapse';
-import {Link} from 'react-router-dom';
+import {Link, Switch, Route} from 'react-router-dom';
 import SubmitDialog from "app/packages/course/src/containers/SubmitDialog";
 import pick from 'lodash/pick';
+import Tabs from '../../containers/Tabs';
+import PostList from 'app/packages/post/src/containers/List';
 
 const CourseSingle = (props) => {
 
@@ -23,81 +25,94 @@ const CourseSingle = (props) => {
         onSubmitSuccess,
         openSubmitDialog,
         data,
+        match,
     } = props;
 
     const [detailExpand, setDetailExpand] = useState(false);
 
     return (
-        <Paper className={classes.root}>
-            <Grid container spacing={1} alignItems={"center"} justify={"space-between"}>
-                <Grid item>
-                    <Typography variant="h1" component={Grid} container alignItems={"center"}>
-                        <SchoolIcon fontSize={"inherit"} className={classes.titleIcon}/>
-                        {title}
-                        {
-                            me.get('id') === user.id && (
-                                <div className={classes.actions}>
-                                    <IconButton
-                                        size={"small"}
-                                        onClick={() => openSubmitDialog(pick(data, ['id', 'title', 'hasPassword']))}
-                                    >
-                                        <EditIcon/>
-                                    </IconButton>
-                                    <IconButton
-                                        size={"small"}
-                                    >
-                                        <DeleteIcon/>
-                                    </IconButton>
-                                </div>
-                            )
-                        }
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Grid container spacing={1} alignItems={"center"}>
-                        <IconButton
-                            onClick={() => setDetailExpand(x => !x)}
-                        >
-                            <ExpandMoreIcon/>
-                        </IconButton>
+        <React.Fragment>
+            <Paper className={classes.header}>
+                <Grid container spacing={1} alignItems={"center"} justify={"space-between"}>
+                    <Grid item>
+                        <Typography variant="h1" component={Grid} container alignItems={"center"}>
+                            <SchoolIcon fontSize={"inherit"} className={classes.titleIcon}/>
+                            {title}
+                            {
+                                me.get('id') === user.id && (
+                                    <div className={classes.actions}>
+                                        <IconButton
+                                            size={"small"}
+                                            onClick={() => openSubmitDialog(pick(data, ['id', 'title', 'hasPassword']))}
+                                        >
+                                            <EditIcon/>
+                                        </IconButton>
+                                        <IconButton
+                                            size={"small"}
+                                        >
+                                            <DeleteIcon/>
+                                        </IconButton>
+                                    </div>
+                                )
+                            }
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Grid container spacing={1} alignItems={"center"}>
+                            <IconButton
+                                onClick={() => setDetailExpand(x => !x)}
+                            >
+                                <ExpandMoreIcon/>
+                            </IconButton>
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-            <Collapse in={detailExpand}>
-                <table className={`table table-bordered table-hover ${classes.table}`}>
-                    <tr>
-                        <td>
-                            <Typography className={classes.tableTitle}>
-                                مدرس
-                            </Typography>
-                        </td>
-                        <td>
-                            <Typography
-                                component={Link}
-                                to={`/instructor/${user.id}`}
-                            >
-                                <Grid container alignItems={"center"}>
-                                    <Avatar
-                                        className={classes.avatar}
-                                    >
-                                        {`${user.firstName[0]} ${user.lastName[0]}`}
-                                    </Avatar>
-                                    <Typography
-                                        className={classes.userName}
-                                        display={"inline"}
-                                    >
-                                        {`${user.firstName} ${user.lastName}`}
-                                    </Typography>
-                                </Grid>
-                            </Typography>
-                        </td>
-                    </tr>
-                </table>
-            </Collapse>
+                <Collapse in={detailExpand}>
+                    <table className={`table table-bordered table-hover ${classes.table}`}>
+                        <tr>
+                            <td>
+                                <Typography className={classes.tableTitle}>
+                                    مدرس
+                                </Typography>
+                            </td>
+                            <td>
+                                <Typography
+                                    component={Link}
+                                    to={`/instructor/${user.id}`}
+                                >
+                                    <Grid container alignItems={"center"}>
+                                        <Avatar
+                                            className={classes.avatar}
+                                        >
+                                            {`${user.firstName[0]} ${user.lastName[0]}`}
+                                        </Avatar>
+                                        <Typography
+                                            className={classes.userName}
+                                            display={"inline"}
+                                        >
+                                            {`${user.firstName} ${user.lastName}`}
+                                        </Typography>
+                                    </Grid>
+                                </Typography>
+                            </td>
+                        </tr>
+                    </table>
+                </Collapse>
+                <div className={classes.tabWrapper}>
+                    <Tabs/>
+                </div>
+            </Paper>
+            <Switch>
+                <Route
+                    path={`${match.url}/:filter(fresh|alert|assignment|attendance|project|grade)`}
+                    excat
+                    component={PostList}
+                />
+            </Switch>
             <SubmitDialog
                 onSuccess={onSubmitSuccess}
             />
-        </Paper>
+        </React.Fragment>
     );
 }
 

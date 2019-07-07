@@ -34,7 +34,7 @@ const MainRouter = (props) => {
                             />
                             <Switch>
                                 <Route exact path={'/courses'} component={CourseList}/>
-                                <Route exact path={'/course/:id'} component={CourseSingle}/>
+                                <Route path={'/course/:id'} component={CourseSingle}/>
                                 <Redirect to={"/courses"}/>
                             </Switch>
                         </div>
