@@ -14,10 +14,10 @@ const Item = (props) => {
         classes,
         title,
         id,
+        userId,
         openSubmitDialog,
         data,
         me,
-        userId,
     } = props;
 
     return (

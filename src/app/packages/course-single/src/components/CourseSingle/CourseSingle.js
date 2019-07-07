@@ -14,6 +14,7 @@ import SubmitDialog from "app/packages/course/src/containers/SubmitDialog";
 import pick from 'lodash/pick';
 import Tabs from '../../containers/Tabs';
 import PostList from 'app/packages/post/src/containers/List';
+import {SetGlobalState} from 'packages/global-state';
 
 const CourseSingle = (props) => {
 
@@ -26,12 +27,18 @@ const CourseSingle = (props) => {
         openSubmitDialog,
         data,
         match,
+        activeTab,
     } = props;
 
     const [detailExpand, setDetailExpand] = useState(false);
 
     return (
         <React.Fragment>
+            <SetGlobalState
+                itemKey={"courseId"}
+                itemValue={data.id}
+                shouldUpdate
+            />
             <Paper className={classes.header}>
                 <Grid container spacing={1} alignItems={"center"} justify={"space-between"}>
                     <Grid item>
@@ -104,7 +111,8 @@ const CourseSingle = (props) => {
             </Paper>
             <Switch>
                 <Route
-                    path={`${match.url}/:filter(fresh|alert|assignment|attendance|project|grade)`}
+                    key={activeTab}
+                    path={`${match.url}/:type(fresh|alert|assignment|attendance|project|grade)`}
                     excat
                     component={PostList}
                 />

@@ -4,12 +4,12 @@ import {open} from "packages/dialog";
 
 export default connect(
     state => ({
-        activeTab: state.globalState.get('courseActiveTab') || false,
+        courseId: state.globalState.get('courseId'),
     }),
     dispatch => ({
         openSubmitDialog: (initialValues) => {
-            dispatch(initialize("course", initialValues));
-            dispatch(open("course"));
+            dispatch(initialize("post", initialValues));
+            dispatch(open("post"));
         },
     })
 )
