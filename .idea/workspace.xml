@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01b1a36f-dd51-48bd-8334-60eacf8cbf43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/List/handlers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/containers/SubmitDialog/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/SubmitDialog/handlers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,18 +57,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -98,17 +83,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers2.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            <state relative-caret-position="525">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -116,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
+            <state relative-caret-position="-373">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -140,6 +130,8 @@
       <find>tea</find>
       <find>fulfilled</find>
       <find>si</find>
+      <find>pushFirstData</find>
+      <find>data</find>
     </findStrings>
     <replaceStrings>
       <replace>margin={&quot;normal&quot;}</replace>
@@ -198,13 +190,13 @@
         <option value="$PROJECT_DIR$/src/app/router/MainRouter/style.js" />
         <option value="$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js" />
         <option value="$PROJECT_DIR$/src/app/themes/theme1.js" />
-        <option value="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js" />
-        <option value="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js" />
         <option value="$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js" />
         <option value="$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js" />
         <option value="$PROJECT_DIR$/src/app/packages/course/src/containers/SubmitDialog/handlers.js" />
         <option value="$PROJECT_DIR$/src/app/packages/course/src/containers/List/handlers.js" />
         <option value="$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers.js" />
+        <option value="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js" />
+        <option value="$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js" />
       </list>
     </option>
   </component>
@@ -520,11 +512,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8973000" />
+    <option name="totallyTimeSpent" value="9638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -551,13 +542,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/packages/auth/src/containers/Register/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -877,16 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -938,22 +912,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
+        <state relative-caret-position="-373">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTableNetwork.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/withDataTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/data-table/src/decorators/handlers2.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

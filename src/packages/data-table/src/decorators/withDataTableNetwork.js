@@ -1,6 +1,7 @@
-import {compose, lifecycle, defaultProps} from "recompose";
+import {compose, lifecycle, defaultProps, withState, withProps} from "recompose";
 import network from 'app/network';
 import {buildQueryString} from 'utils/utils/url';
+import handlers from './handlers2';
 
 export default compose(
     defaultProps({
@@ -29,6 +30,12 @@ export default compose(
             }),
         }
     }),
+    withState('data', 'setData', []),
+    withState('total', 'setTotal', 0),
+    withProps(props => ({
+        hasNext: props.total - (props.settings.skip + props.settings.limit) > 0,
+    })),
+    handlers,
     lifecycle({
         componentDidUpdate(prevProps) {
             const {
