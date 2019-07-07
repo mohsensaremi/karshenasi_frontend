@@ -32,7 +32,7 @@ let theme = createMuiTheme({
 theme = {
     ...theme,
     variable: {
-        maxWidth: 700,
+        maxWidth: 900,
         transition: theme.transitions.create('all', {
             duration: theme.transitions.duration.shortest,
         }),
