@@ -7,6 +7,8 @@ import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {Link} from 'react-router-dom';
+import Avatar from '@material-ui/core/Avatar';
+import FaceIcon from '@material-ui/icons/Face';
 
 const Item = (props) => {
 
@@ -18,6 +20,7 @@ const Item = (props) => {
         data,
         me,
         userId,
+        user,
     } = props;
 
     return (
@@ -45,16 +48,32 @@ const Item = (props) => {
             <Grid
                 container
                 alignItems={"center"}
-                justify={"flex-end"}
+                justify={"space-between"}
             >
-                <Button
-                    color={"primary"}
-                    variant={"outlined"}
-                    component={Link}
-                    to={`/course/${id}`}
-                >
-                    ورود به کلاس
-                </Button>
+                <Grid item>
+                    {
+                        user && (
+                            <Grid container alignItems={"center"}>
+                                <Avatar className={classes.userAvatar}>
+                                    <FaceIcon/>
+                                </Avatar>
+                                <Typography className={classes.user}>
+                                    {`${user.firstName} ${user.lastName}`}
+                                </Typography>
+                            </Grid>
+                        )
+                    }
+                </Grid>
+                <Grid item>
+                    <Button
+                        color={"primary"}
+                        variant={"outlined"}
+                        component={Link}
+                        to={`/course/${id}`}
+                    >
+                        ورود به کلاس
+                    </Button>
+                </Grid>
             </Grid>
         </Paper>
     );
