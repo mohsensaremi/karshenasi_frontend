@@ -1,19 +1,17 @@
-import {compose, lifecycle, defaultProps, withState, withProps} from "recompose";
+import {compose, lifecycle, withState, withProps} from "recompose";
 import network from 'app/network';
 import {buildQueryString} from 'utils/utils/url';
 import handlers from './handlers2';
+import omit from 'lodash/omit';
 
 export default compose(
-    defaultProps({
-        paging: "set",
-    }),
     network(props => {
-        const s = {
+        const s = omit({
             ...props.settings,
             ...props.query,
-        };
-        if (props.search && props.searchColumns) {
-            s.search = props.search;
+        }, ['search', 'forwardPaging', 'backwardPaging']);
+        if (props.settings.search && props.searchColumns) {
+            s.search = props.settings.search;
             s.searchColumns = props.searchColumns.join('&searchColumns=');
         }
 
@@ -23,7 +21,6 @@ export default compose(
         return {
             [props.name]: {
                 url: requestUrl,
-                xx: "zz",
             },
             [`${props.name}Fn`]: () => ({
                 [props.name]: {
@@ -44,9 +41,7 @@ export default compose(
             const {
                 setTotal,
                 setData,
-                paging,
-                searchingState,
-                setSearchingState,
+                settings,
             } = this.props;
             const tableFetch = this.props[this.props.name];
             const prevTableFetch = prevProps && prevProps[this.props.name];
@@ -54,15 +49,12 @@ export default compose(
             if (prevTableFetch && prevTableFetch.fulfilled !== tableFetch.fulfilled && tableFetch.value && tableFetch.value.data) {
                 if (tableFetch.value.data.data) {
                     const newData = tableFetch.value.data.data;
-                    if (searchingState) {
-                        setSearchingState(false);
-                        setData(newData);
-                    } else if (paging === "set") {
-                        setData(newData);
-                    } else if (paging === "append") {
+                    if (settings.forwardPaging) {
                         setData(x => ([...x, ...newData]));
-                    } else if (paging === "prepend") {
+                    } else if (settings.backwardPaging) {
                         setData(x => ([...newData, ...x]));
+                    } else {
+                        setData(newData);
                     }
                 }
                 if (tableFetch.value.data.total) {

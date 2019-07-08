@@ -3,15 +3,23 @@ import debounce from 'lodash/debounce';
 
 const mergeSettings = (newSettings) => (settings) => ({
     ...settings,
+    forwardPaging: false,
+    backwardPaging: false,
     ...newSettings,
 });
 
 export default withHandlers({
     onNextPage: ({settings, setSettings}) => () => {
-        setSettings(mergeSettings({skip: settings.skip + settings.limit}));
+        setSettings(mergeSettings({
+            skip: settings.skip + settings.limit,
+            forwardPaging: true,
+        }));
     },
     onPrevPage: ({settings, setSettings}) => () => {
-        setSettings(mergeSettings({skip: settings.skip - settings.limit}));
+        setSettings(mergeSettings({
+            skip: settings.skip - settings.limit,
+            backwardPaging: true,
+        }));
     },
     onChangePage: ({settings, setSettings}) => (event, page) => {
         setSettings(mergeSettings({skip: page * settings.limit}));
@@ -29,13 +37,17 @@ export default withHandlers({
 
         setSettings(mergeSettings({order, orderBy}));
     },
-    onChangeSearch: ({setSearch, setSearchInput, setSearchingState}) => (e) => {
+    onChangeSearch: (props) => (e) => {
+        const {setSearchInput} = props;
         const value = e.target.value;
         setSearchInput(value);
-        setStateDebounced(setSearch, value, () => setSearchingState(true));
+        setStateDebounced(value, props);
     },
 });
 
-const setStateDebounced = debounce((setState, value, then) => {
-    setState(value, then);
+const setStateDebounced = debounce((value, {setSettings}) => {
+    setSettings(mergeSettings({
+        skip: 0,
+        search: value,
+    }));
 }, 1000);
