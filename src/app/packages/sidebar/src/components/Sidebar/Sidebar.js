@@ -16,6 +16,7 @@ const Sidebar = (props) => {
     const {
         classes,
         me,
+        onClickLogout,
     } = props;
 
     const buttons = [
@@ -34,6 +35,7 @@ const Sidebar = (props) => {
         {
             label: "خروج",
             icon: PowerSettingsNewIcon,
+            onClick: onClickLogout
         },
     ];
 
@@ -63,6 +65,7 @@ const Sidebar = (props) => {
                                 key={index}
                                 fullWidth
                                 className={classes.button}
+                                onClick={button.onClick}
                             >
                                 <Icon className={classes.buttonIcon}/>
                                 {button.label}

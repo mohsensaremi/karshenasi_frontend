@@ -9,5 +9,8 @@ export default connect(
             dispatch(initialize("course", initialValues));
             dispatch(open("course"));
         },
+        openJoinDialog: () => {
+            dispatch(open("joinCourse"));
+        },
     })
 )

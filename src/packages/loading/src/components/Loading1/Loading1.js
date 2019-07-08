@@ -7,7 +7,7 @@ const Loading1 = (props) => {
     } = props;
 
     return (
-        <div className={classes.loadingWrapper}>
+        <div className={classes.root}>
             <CircularProgress/>
         </div>
     )
