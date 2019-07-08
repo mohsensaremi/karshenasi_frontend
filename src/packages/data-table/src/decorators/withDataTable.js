@@ -9,7 +9,8 @@ export default compose(
         skip: props.skip || 0,
         limit: props.limit || 25,
         search: '',
-        isPaging: null,
+        forwardPaging: false,
+        backwardPaging: false,
     })),
     handlers,
 );

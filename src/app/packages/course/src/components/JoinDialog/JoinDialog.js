@@ -4,7 +4,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import Loading from 'packages/loading/src/components/Loading1';
-import Button from "../SubmitDialog/SubmitDialog";
+import Button from "@material-ui/core/Button";
 
 const JoinDialog = (props) => {
 
@@ -31,6 +31,7 @@ const JoinDialog = (props) => {
                 {
                     hasPassword && (
                         <TextField
+                            autoFocus
                             margin={"normal"}
                             fullWidth
                             label={"کلمه عبور کلاس"}
@@ -41,7 +42,7 @@ const JoinDialog = (props) => {
                     )
                 }
                 {
-                    loading && (
+                    loading && !hasPassword && (
                         <Loading/>
                     )
                 }

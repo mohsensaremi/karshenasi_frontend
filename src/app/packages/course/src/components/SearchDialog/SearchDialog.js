@@ -32,6 +32,7 @@ const SearchDialog = (props) => {
         >
             <DialogContent>
                 <TextField
+                    autoFocus
                     margin={"normal"}
                     fullWidth
                     label={"جستجو عنوان کلاس"}
@@ -53,13 +54,14 @@ const SearchDialog = (props) => {
                                     ) : (
                                         searchFetch.value.data.map(item => {
                                             return (
-                                                <React.Fragment>
+                                                <React.Fragment
+                                                    key={item.id}
+                                                >
                                                     <ListItem
-                                                        key={item.id}
                                                         button
                                                         onClick={() => {
-                                                            openJoinDialog(item);
                                                             onClose();
+                                                            openJoinDialog(item);
                                                         }}
                                                     >
                                                         <Avatar className={classes.avatar}>
