@@ -22,43 +22,39 @@ const Item = (props) => {
 
     return (
         <Paper className={classes.root}>
-            <Grid container spacing={1} alignItems={"center"} justify={"space-between"}>
-                <Grid item>
-                    <Typography>
-                        {title}
-                    </Typography>
-                </Grid>
+            <Typography className={classes.title}>
+                {title}
                 {
                     me.get('id') === userId && (
-                        <Grid item>
-                            <Grid container spacing={1} alignItems={"center"}>
-                                <Grid item>
-                                    <Button
-                                        color={"primary"}
-                                        variant={"outlined"}
-                                        component={Link}
-                                        to={`/course/${id}`}
-                                    >
-                                        ورود به کلاس
-                                    </Button>
-                                </Grid>
-                                <Grid item>
-                                    <IconButton
-                                        size={"small"}
-                                        onClick={() => openSubmitDialog(data)}
-                                    >
-                                        <EditIcon/>
-                                    </IconButton>
-                                    <IconButton
-                                        size={"small"}
-                                    >
-                                        <DeleteIcon/>
-                                    </IconButton>
-                                </Grid>
-                            </Grid>
-                        </Grid>
+                        <React.Fragment>
+                            <IconButton
+                                size={"small"}
+                                onClick={() => openSubmitDialog(data)}
+                            >
+                                <EditIcon/>
+                            </IconButton>
+                            < IconButton
+                                size={"small"}
+                            >
+                                <DeleteIcon/>
+                            </IconButton>
+                        </React.Fragment>
                     )
                 }
+            </Typography>
+            <Grid
+                container
+                alignItems={"center"}
+                justify={"flex-end"}
+            >
+                <Button
+                    color={"primary"}
+                    variant={"outlined"}
+                    component={Link}
+                    to={`/course/${id}`}
+                >
+                    ورود به کلاس
+                </Button>
             </Grid>
         </Paper>
     );

@@ -13,9 +13,12 @@ export default withStyles(theme => ({
         marginTop: theme.spacing(2),
     },
     item: {
-        marginBottom: theme.spacing(),
+
     },
     toolbar: {
         marginBottom: theme.spacing(2),
+    },
+    button: {
+        marginTop: theme.spacing(2),
     },
 }), {flip: false});

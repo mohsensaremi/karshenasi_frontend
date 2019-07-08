@@ -21,8 +21,6 @@ const List = (props) => {
         onSubmitSuccess,
     } = props;
 
-    console.log("listFetch", listFetch);
-
     return (
         <div className={classes.root}>
             <div className={classes.toolbar}>
@@ -60,23 +58,29 @@ const List = (props) => {
                         </Button>
                     </Typography>
                 ) : (
-                    <div>
+                    <Grid container spacing={2}>
                         {
                             data.map(item => {
 
                                 return (
-                                    <Item
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        md={6}
                                         key={item.id}
-                                        data={item}
-                                        classes={{
-                                            root: classes.item,
-                                        }}
-                                        openSubmitDialog={openSubmitDialog}
-                                    />
+                                    >
+                                        <Item
+                                            data={item}
+                                            classes={{
+                                                root: classes.item,
+                                            }}
+                                            openSubmitDialog={openSubmitDialog}
+                                        />
+                                    </Grid>
                                 );
                             })
                         }
-                    </div>
+                    </Grid>
                 )
             }
             {
@@ -93,6 +97,7 @@ const List = (props) => {
                         onClick={onNextPage}
                         disabled={listFetch.pending}
                         color={"primary"}
+                        className={classes.button}
                     >
                         بیشتر
                     </Button>
