@@ -11,7 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import DialogContent from '@material-ui/core/DialogContent';
 import Loading from 'packages/loading/src/components/Loading1';
 
-const JoinDialog = (props) => {
+const SearchDialog = (props) => {
 
     const {
         classes,
@@ -77,4 +77,4 @@ const JoinDialog = (props) => {
     );
 }
 
-export default JoinDialog;
+export default SearchDialog;

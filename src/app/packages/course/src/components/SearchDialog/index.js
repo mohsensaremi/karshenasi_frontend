@@ -1,7 +1,7 @@
 import {compose} from "recompose";
 import style from './style';
-import JoinDialog from './JoinDialog';
+import SearchDialog from './SearchDialog';
 
 export default compose(
     style,
-)(JoinDialog);
+)(SearchDialog);
