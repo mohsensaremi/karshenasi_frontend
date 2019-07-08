@@ -20,6 +20,7 @@ const SearchDialog = (props) => {
         input,
         onChangeInput,
         searchFetch,
+        openJoinDialog,
     } = props;
 
     return (
@@ -53,7 +54,14 @@ const SearchDialog = (props) => {
                                         searchFetch.value.data.map(item => {
                                             return (
                                                 <React.Fragment>
-                                                    <ListItem button key={item.id}>
+                                                    <ListItem
+                                                        key={item.id}
+                                                        button
+                                                        onClick={() => {
+                                                            openJoinDialog(item);
+                                                            onClose();
+                                                        }}
+                                                    >
                                                         <Avatar className={classes.avatar}>
                                                             <SchoolIcon/>
                                                         </Avatar>

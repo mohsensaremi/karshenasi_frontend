@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SubmitDialog from '../../containers/SubmitDialog';
 import SearchDialog from '../../containers/SearchDialog';
+import JoinDialog from '../../containers/JoinDialog';
 import Item from '../../containers/Item';
 import Loading1 from 'packages/loading/src/components/Loading1';
 
@@ -14,7 +15,7 @@ const List = (props) => {
         listFetch,
         data,
         openSubmitDialog,
-        openJoinDialog,
+        openSearchDialog,
         onChangeSearch,
         searchInput,
         onNextPage,
@@ -38,7 +39,7 @@ const List = (props) => {
                         <Button
                             variant={"contained"}
                             color={"primary"}
-                            onClick={() => isInstructor ? openSubmitDialog({}) : openJoinDialog()}
+                            onClick={() => isInstructor ? openSubmitDialog({}) : openSearchDialog()}
                         >
                             {isInstructor ? "کلاس جدید" : "عضویت در کلاس"}
                         </Button>
@@ -90,6 +91,9 @@ const List = (props) => {
                 onSuccess={onSubmitSuccess}
             />
             <SearchDialog/>
+            <JoinDialog
+                onSuccess={onSubmitSuccess}
+            />
         </div>
     );
 }
