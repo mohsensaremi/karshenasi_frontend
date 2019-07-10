@@ -30,4 +30,7 @@ export default withStyles(theme => ({
     iconAlert3: {
         color: purple[500],
     },
+    header: {
+        marginBottom: theme.spacing(2),
+    },
 }), {flip: false});
