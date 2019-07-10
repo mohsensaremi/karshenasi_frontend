@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Item from '../../containers/Item';
 import SubmitDialog from '../../containers/SubmitDialog';
+import DetailDialog from '../../containers/DetailDialog';
 
 const List = (props) => {
 
@@ -16,6 +17,7 @@ const List = (props) => {
         onChangeSearch,
         searchInput,
         onSubmitSuccess,
+        isOwner,
     } = props;
 
 
@@ -36,13 +38,17 @@ const List = (props) => {
                         />
                     </Grid>
                     <Grid item>
-                        <Button
-                            variant={"contained"}
-                            color={"primary"}
-                            onClick={() => openSubmitDialog({})}
-                        >
-                            مطلب جدید
-                        </Button>
+                        {
+                            isOwner && (
+                                <Button
+                                    variant={"contained"}
+                                    color={"primary"}
+                                    onClick={() => openSubmitDialog({})}
+                                >
+                                    مطلب جدید
+                                </Button>
+                            )
+                        }
                     </Grid>
                 </Grid>
             </div>
@@ -63,6 +69,7 @@ const List = (props) => {
             <SubmitDialog
                 onSuccess={onSubmitSuccess}
             />
+            <DetailDialog/>
         </div>
     );
 }

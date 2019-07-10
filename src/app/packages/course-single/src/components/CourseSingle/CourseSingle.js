@@ -9,7 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Collapse from '@material-ui/core/Collapse';
-import {Link, Switch, Route} from 'react-router-dom';
+import {Link, Switch, Route,Redirect} from 'react-router-dom';
 import SubmitDialog from "app/packages/course/src/containers/SubmitDialog";
 import pick from 'lodash/pick';
 import Tabs from '../../containers/Tabs';
@@ -37,6 +37,11 @@ const CourseSingle = (props) => {
             <SetGlobalState
                 itemKey={"courseId"}
                 itemValue={data.id}
+                shouldUpdate
+            />
+            <SetGlobalState
+                itemKey={"courseUserId"}
+                itemValue={data.userId}
                 shouldUpdate
             />
             <Paper className={classes.header}>
@@ -115,6 +120,9 @@ const CourseSingle = (props) => {
                     path={`${match.url}/:type(fresh|alert|assignment|attendance|project|grade)`}
                     excat
                     component={PostList}
+                />
+                <Redirect
+                to={`${match.url}/fresh`}
                 />
             </Switch>
             <SubmitDialog

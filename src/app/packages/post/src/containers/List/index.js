@@ -4,8 +4,10 @@ import withDataTable from 'packages/data-table/src/decorators/withDataTable';
 import withDataTableNetwork from 'packages/data-table/src/decorators/withDataTableNetwork';
 import store from './store';
 import handlers from './handlers';
+import withMe from 'app/packages/auth/src/decorators/withMe';
 
 export default compose(
+    withMe,
     store,
     withProps(props => ({
         name: "listFetch",

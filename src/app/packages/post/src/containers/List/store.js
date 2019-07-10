@@ -3,8 +3,9 @@ import {initialize} from "redux-form";
 import {open} from "packages/dialog";
 
 export default connect(
-    state => ({
+    (state, {me}) => ({
         courseId: state.globalState.get('courseId'),
+        isOwner: me.get('id') === state.globalState.get('courseUserId'),
     }),
     dispatch => ({
         openSubmitDialog: (initialValues) => {

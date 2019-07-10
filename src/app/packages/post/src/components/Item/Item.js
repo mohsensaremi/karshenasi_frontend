@@ -13,7 +13,7 @@ const Item = (props) => {
     const {
         classes,
         title,
-        id,
+        onClickDetail,
         userId,
         openSubmitDialog,
         data,
@@ -28,20 +28,19 @@ const Item = (props) => {
                         {title}
                     </Typography>
                 </Grid>
-                {
-                    me.get('id') === userId && (
+                <Grid item>
+                    <Grid container spacing={1} alignItems={"center"}>
                         <Grid item>
-                            <Grid container spacing={1} alignItems={"center"}>
-                                <Grid item>
-                                    <Button
-                                        color={"primary"}
-                                        variant={"outlined"}
-                                        component={Link}
-                                        to={`/course/${id}`}
-                                    >
-                                        جزییات
-                                    </Button>
-                                </Grid>
+                            <Button
+                                color={"primary"}
+                                variant={"outlined"}
+                                onClick={onClickDetail}
+                            >
+                                جزییات
+                            </Button>
+                        </Grid>
+                        {
+                            me.get('id') === userId && (
                                 <Grid item>
                                     <IconButton
                                         size={"small"}
@@ -55,10 +54,10 @@ const Item = (props) => {
                                         <DeleteIcon/>
                                     </IconButton>
                                 </Grid>
-                            </Grid>
-                        </Grid>
-                    )
-                }
+                            )
+                        }
+                    </Grid>
+                </Grid>
             </Grid>
         </Paper>
     );
