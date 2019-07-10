@@ -7,6 +7,7 @@ import Toolbar from 'app/packages/header/src/containers/Toolbar';
 import Sidebar from 'app/packages/sidebar/src/containers/Sidebar';
 import CourseList from 'app/packages/course/src/containers/List';
 import CourseSingle from 'app/packages/course-single/src/renderes/CourseSingle';
+import Page from 'app/packages/calendar/src/containers/Page';
 import {StickyContainer, Sticky} from 'react-sticky';
 
 const MainRouter = (props) => {
@@ -43,6 +44,7 @@ const MainRouter = (props) => {
                                     </Grid>
                                     <Grid item xs={12} md={9}>
                                         <Switch>
+                                            <Route exact path={'/calendar'} component={Page}/>
                                             <Route exact path={'/courses'} component={CourseList}/>
                                             <Route path={'/course/:id'} component={CourseSingle}/>
                                             <Redirect to={"/courses"}/>

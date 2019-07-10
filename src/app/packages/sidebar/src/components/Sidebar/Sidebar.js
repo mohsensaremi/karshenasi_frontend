@@ -23,10 +23,14 @@ const Sidebar = (props) => {
         {
             label: "کلاس های من",
             icon: SchoolIcon,
+            component: Link,
+            to: "/courses",
         },
         {
             label: "در یک نگاه",
             icon: CastForEducationIcon,
+            component: Link,
+            to: "/calendar",
         },
         {
             label: "ویرایش پروفایل",
@@ -59,13 +63,18 @@ const Sidebar = (props) => {
             <Paper className={classes.paper}>
                 {
                     buttons.map((button, index) => {
-                        const Icon = button.icon;
+                        const {
+                            label,
+                            icon: Icon,
+                            ...buttonProps
+                        } = button;
+
                         return (
                             <Button
                                 key={index}
                                 fullWidth
                                 className={classes.button}
-                                onClick={button.onClick}
+                                {...buttonProps}
                             >
                                 <Icon className={classes.buttonIcon}/>
                                 {button.label}
