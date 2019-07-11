@@ -55,7 +55,7 @@ const List = (props) => {
             </div>
             <Grid container spacing={2}>
                 {
-                    data.length === 0 && !settings.searchState && (
+                    listFetch.fulfilled && data.length === 0 && !settings.searchState && (
                         <Grid item xs={12}>
                             <div
                                 className={classes.hint}

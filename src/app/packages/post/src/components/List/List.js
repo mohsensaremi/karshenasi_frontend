@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Item from '../../containers/Item';
 import SubmitDialog from '../../containers/SubmitDialog';
 import DetailDialog from '../../containers/DetailDialog';
+import Loading1 from "packages/loading/src/components/Loading1";
 
 const List = (props) => {
 
@@ -20,6 +21,9 @@ const List = (props) => {
         onSubmitSuccess,
         isOwner,
         settings,
+        listFetch,
+        onNextPage,
+        hasNext,
     } = props;
 
 
@@ -55,7 +59,7 @@ const List = (props) => {
                 </Grid>
             </div>
             {
-                data.length === 0 && !settings.searchState && (
+                listFetch.fulfilled && data.length === 0 && !settings.searchState && (
                     <Grid item xs={12}>
                         <div
                             className={classes.hint}
@@ -98,6 +102,24 @@ const List = (props) => {
                         />
                     );
                 })
+            }
+            {
+                listFetch.pending && (
+                    <Loading1/>
+                )
+            }
+            {
+                hasNext && (
+                    <Button
+                        fullWidth
+                        onClick={onNextPage}
+                        disabled={listFetch.pending}
+                        color={"primary"}
+                        className={classes.button}
+                    >
+                        بیشتر
+                    </Button>
+                )
             }
             <SubmitDialog
                 onSuccess={onSubmitSuccess}
