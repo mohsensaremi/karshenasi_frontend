@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01b1a36f-dd51-48bd-8334-60eacf8cbf43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/Instructor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/src/containers/Instructor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/src/renderes/Instructor/Instructor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/packages/instructor/src/renderes/Instructor/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/handlers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/components/Item/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/components/Item/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,22 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/renderes/Instructor/Instructor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/Instructor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="490">
+              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -52,37 +32,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/renderes/Instructor/index.js">
+        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="300">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/router/MainRouter/MainRouter.js">
+        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/List/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/packages/course-single/src/components/CourseSingle/CourseSingle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="92" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -90,11 +55,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+            <state relative-caret-position="360">
+              <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/JoinDialog/handlers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -102,29 +76,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="39" column="37" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="75">
+              <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="6" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/Item/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/Item/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/style.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/Item/handlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/containers/Instructor/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="75">
+              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -173,6 +156,7 @@
       <find>eventsWrapper</find>
       <find>setMonth</find>
       <find>user</find>
+      <find>JoinDialog</find>
     </findStrings>
     <replaceStrings>
       <replace>margin={&quot;normal&quot;}</replace>
@@ -196,9 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/packages/sidebar/src/containers/Sidebar/handlers.js" />
-        <option value="$PROJECT_DIR$/src/packages/loading/src/components/Loading1/Loading1.js" />
-        <option value="$PROJECT_DIR$/src/app/packages/auth/src/decorators/withIsInstructor.js" />
         <option value="$PROJECT_DIR$/src/app/packages/post/src/components/JoinDialog/JoinDialog.js" />
         <option value="$PROJECT_DIR$/src/app/packages/post/src/components/JoinDialog/index.js" />
         <option value="$PROJECT_DIR$/src/app/packages/post/src/containers/JoinDialog/index.js" />
@@ -244,9 +225,12 @@
         <option value="$PROJECT_DIR$/src/app/packages/course/src/components/Item/style.js" />
         <option value="$PROJECT_DIR$/src/app/packages/instructor/src/renderes/Instructor/index.js" />
         <option value="$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/style.js" />
-        <option value="$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js" />
         <option value="$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js" />
         <option value="$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/Instructor.js" />
+        <option value="$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js" />
+        <option value="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/index.js" />
+        <option value="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/store.js" />
+        <option value="$PROJECT_DIR$/src/app/packages/course/src/containers/Item/handlers.js" />
       </list>
     </option>
   </component>
@@ -340,7 +324,72 @@
               <item name="course" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="List" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchDialog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SubmitDialog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="karshenasi_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="JoinDialog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="karshenasi_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -574,11 +623,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/packages/course/src/containers/Item" />
       <recent name="$PROJECT_DIR$/src/app/packages/instructor/src/containers" />
       <recent name="$PROJECT_DIR$/src/app/packages/instructor/src/components" />
       <recent name="$PROJECT_DIR$/src/app/packages/instructor/src" />
       <recent name="$PROJECT_DIR$/src/app/packages" />
-      <recent name="$PROJECT_DIR$/src/app/packages/calendar/src/containers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/packages/loading/src" />
@@ -615,12 +664,12 @@
       <workItem from="1562649082097" duration="36000" />
       <workItem from="1562768375708" duration="4001000" />
       <workItem from="1562822023478" duration="99000" />
-      <workItem from="1562834459467" duration="1443000" />
+      <workItem from="1562834459467" duration="3062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33923000" />
+    <option name="totallyTimeSpent" value="35542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -651,52 +700,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/JoinDialog/handlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/SearchDialog/SearchDialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/SubmitDialog/SubmitDialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/JoinDialog/JoinDialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/SubmitDialog/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/SubmitDialog/handlers.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -980,16 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1061,33 +1054,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js">
+    <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/Instructor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+        <state relative-caret-position="490">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/List/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/List/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/List/List.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="75">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/components/Item/Item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/packages/instructor/src/components/Instructor/Instructor.js">
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/JoinDialog/handlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="135">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/Item/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/Item/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/packages/course/src/containers/Item/handlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>

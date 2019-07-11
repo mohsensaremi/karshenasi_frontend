@@ -21,6 +21,8 @@ const Item = (props) => {
         me,
         userId,
         user,
+        userIsMember,
+        openJoinDialog,
     } = props;
 
     return (
@@ -69,14 +71,26 @@ const Item = (props) => {
                     }
                 </Grid>
                 <Grid item>
-                    <Button
-                        color={"primary"}
-                        variant={"outlined"}
-                        component={Link}
-                        to={`/course/${id}`}
-                    >
-                        ورود به کلاس
-                    </Button>
+                    {
+                        userIsMember ? (
+                            <Button
+                                color={"primary"}
+                                variant={"outlined"}
+                                component={Link}
+                                to={`/course/${id}`}
+                            >
+                                ورود به کلاس
+                            </Button>
+                        ) : (
+                            <Button
+                                color={"primary"}
+                                variant={"contained"}
+                                onClick={openJoinDialog}
+                            >
+                                عضویت کلاس
+                            </Button>
+                        )
+                    }
                 </Grid>
             </Grid>
         </Paper>
