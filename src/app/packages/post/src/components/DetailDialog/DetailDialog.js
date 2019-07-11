@@ -8,7 +8,7 @@ const DetailDialog = (props) => {
     const {
         classes,
         title,
-        description,
+        content,
         open,
         onClose,
     } = props;
@@ -25,7 +25,7 @@ const DetailDialog = (props) => {
         >
             <DialogContent className={classes.dialogContent}>
                <Typography className={classes.title} variant="h1">{title}</Typography>
-               <Typography className={classes.description}>{description}</Typography>
+               <Typography className={classes.content}>{content}</Typography>
             </DialogContent>
         </Dialog>
     );

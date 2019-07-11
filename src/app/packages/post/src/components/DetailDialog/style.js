@@ -1,10 +1,15 @@
 import withStyles from '@material-ui/core/styles/withStyles';
 
 export default withStyles(theme => ({
-    title: {},
-    description: {},
+    title: {
+        marginBottom: theme.spacing(2),
+    },
+    content: {
+        lineHeight: '30px',
+        fontWeight: 300,
+    },
     dialogContent: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(3),
     },
     paperScrollPaper: {
         minHeight: 'calc(100% - 96px)',
