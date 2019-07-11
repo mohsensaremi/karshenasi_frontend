@@ -5,6 +5,7 @@ const mergeSettings = (newSettings) => (settings) => ({
     ...settings,
     forwardPaging: false,
     backwardPaging: false,
+    searchState: false,
     ...newSettings,
 });
 
@@ -49,5 +50,6 @@ const setStateDebounced = debounce((value, {setSettings}) => {
     setSettings(mergeSettings({
         skip: 0,
         search: value,
+        searchState: value && value.length > 0,
     }));
 }, 1000);

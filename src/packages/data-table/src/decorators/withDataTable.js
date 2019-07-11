@@ -11,6 +11,7 @@ export default compose(
         search: '',
         forwardPaging: false,
         backwardPaging: false,
+        searchState: false,
     })),
     handlers,
 );

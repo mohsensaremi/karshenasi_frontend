@@ -3,6 +3,7 @@ import {SetGlobalState} from 'packages/global-state';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import Item from '../../containers/Item';
 import SubmitDialog from '../../containers/SubmitDialog';
 import DetailDialog from '../../containers/DetailDialog';
@@ -18,6 +19,7 @@ const List = (props) => {
         searchInput,
         onSubmitSuccess,
         isOwner,
+        settings,
     } = props;
 
 
@@ -52,6 +54,37 @@ const List = (props) => {
                     </Grid>
                 </Grid>
             </div>
+            {
+                data.length === 0 && !settings.searchState && (
+                    <Grid item xs={12}>
+                        <div
+                            className={classes.hint}
+                        >
+                            <Typography align={"center"} color={"textSecondary"}>
+                                {
+                                    isOwner ? (
+                                        "شما هیج مطلبی منتشر نکرده اید"
+                                    ) : (
+                                        "مطلبی موجود نمی باشد"
+                                    )
+                                }
+                            </Typography>
+                            {
+                                isOwner && (
+                                    <Button
+                                        variant={"contained"}
+                                        color={"primary"}
+                                        onClick={() => openSubmitDialog({})}
+                                        className={classes.hintButton}
+                                    >
+                                        مطلب جدید
+                                    </Button>
+                                )
+                            }
+                        </div>
+                    </Grid>
+                )
+            }
             {
                 data.map(item => {
                     return (
