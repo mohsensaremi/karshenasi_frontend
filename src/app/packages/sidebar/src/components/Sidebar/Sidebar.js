@@ -54,7 +54,7 @@ const Sidebar = (props) => {
                     </Avatar>
                     <Typography>
                         {`${me.get('firstName')} ${me.get('lastName')}`}
-                        <Typography className={classes.type} display={"inline"}>
+                        <Typography className={classes.type} display={"inline"} component={"span"}>
                             {`(${me.get('typeFa')})`}
                         </Typography>
                     </Typography>

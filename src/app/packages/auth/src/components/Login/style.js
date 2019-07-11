@@ -11,20 +11,20 @@ export default withStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: theme.palette.primary.dark,
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
         flexDirection: 'column',
         boxSizing: 'border-box',
     },
     logo: {
-        marginBottom: theme.spacing.unit * 2,
+        marginBottom: theme.spacing(2),
         marginTop: -81,
     },
     paper: {
         maxWidth: 400,
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
     },
     buttonWrapper: {
-        marginTop: theme.spacing.unit,
+        marginTop: theme.spacing(),
         textAlign: 'left',
     },
     link: {

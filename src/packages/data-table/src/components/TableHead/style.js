@@ -3,7 +3,7 @@ import {lighten} from "@material-ui/core/styles/colorManipulator";
 
 export default withStyles(theme => ({
     root: {
-        paddingRight: theme.spacing.unit,
+        paddingRight: theme.spacing(),
     },
     highlight:
         theme.palette.type === 'light'

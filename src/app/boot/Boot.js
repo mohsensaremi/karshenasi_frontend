@@ -3,7 +3,6 @@ import Router from 'app/router/Router';
 import {Provider} from 'react-redux';
 import RTL from 'utils/components/RTL';
 import store from './store';
-import {Toast} from 'packages/toast';
 import {BrowserRouter} from 'react-router-dom';
 
 const Boot = () => {
@@ -15,7 +14,6 @@ const Boot = () => {
                     <BrowserRouter>
                         <Router/>
                     </BrowserRouter>
-                    <Toast/>
                 </React.Fragment>
             </RTL>
         </Provider>

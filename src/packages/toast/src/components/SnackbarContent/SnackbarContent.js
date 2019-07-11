@@ -24,9 +24,6 @@ function SnackbarContent(props) {
         <MuiSnackbarContent
             className={classNames(classes[variant], className)}
             aria-describedby="client-snackbar"
-            classes={{
-                action:classes.action,
-            }}
             message={
                 <span id="client-snackbar" className={classes.message}>
           <Icon className={classNames(classes.icon, classes.iconVariant)}/>

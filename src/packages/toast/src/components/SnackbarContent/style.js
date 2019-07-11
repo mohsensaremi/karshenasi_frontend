@@ -20,16 +20,12 @@ export default withStyles(theme => ({
     },
     iconVariant: {
         opacity: 0.9,
-        marginLeft: theme.spacing.unit,
+        marginLeft: theme.spacing(),
     },
     message: {
         display: 'flex',
         alignItems: 'center',
         whiteSpace: 'pre-line',
         fontFamily: 'IRANSans',
-    },
-    action: {
-        paddingLeft: 0,
-        marginRight: 0,
     },
 }), {flip: false});

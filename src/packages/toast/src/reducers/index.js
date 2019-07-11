@@ -4,7 +4,7 @@ import {combineReducers} from 'redux';
 const defaultData = {
     messages: [],
     variant: 'success',
-    autoHideDuration: 6000,
+    autoHideDuration: 6000000,
 };
 
 const open = (state = false, action) => {
