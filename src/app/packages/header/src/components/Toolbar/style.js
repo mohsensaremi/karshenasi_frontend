@@ -8,4 +8,8 @@ export default withStyles(theme => ({
     title: {
         flexGrow: 1,
     },
+    logo: {
+        marginLeft: theme.spacing(),
+        height: 48,
+    },
 }), {flip: false});
