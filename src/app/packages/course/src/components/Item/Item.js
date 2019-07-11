@@ -57,7 +57,11 @@ const Item = (props) => {
                                 <Avatar className={classes.userAvatar}>
                                     <FaceIcon/>
                                 </Avatar>
-                                <Typography className={classes.user}>
+                                <Typography
+                                    className={classes.user}
+                                    component={Link}
+                                    to={`/instructor/${user.id}`}
+                                >
                                     {`${user.firstName} ${user.lastName}`}
                                 </Typography>
                             </Grid>

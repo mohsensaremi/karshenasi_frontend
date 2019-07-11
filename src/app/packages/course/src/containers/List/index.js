@@ -10,7 +10,7 @@ export default compose(
     withIsInstructor,
     withProps(props => ({
         name: "listFetch",
-        url: props.isInstructor ? "/course/owned-courses" : "/course/joined-courses",
+        url: props.url ? props.url : (props.isInstructor ? "/course/owned-courses" : "/course/joined-courses"),
         searchColumns: ["title"],
         limit: 6,
     })),

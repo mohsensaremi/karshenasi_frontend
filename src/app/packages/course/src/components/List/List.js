@@ -22,6 +22,7 @@ const List = (props) => {
         hasNext,
         onSubmitSuccess,
         isInstructor,
+        showAddButton,
     } = props;
 
     return (
@@ -35,15 +36,19 @@ const List = (props) => {
                             value={searchInput}
                         />
                     </Grid>
-                    <Grid item>
-                        <Button
-                            variant={"contained"}
-                            color={"primary"}
-                            onClick={() => isInstructor ? openSubmitDialog({}) : openSearchDialog()}
-                        >
-                            {isInstructor ? "کلاس جدید" : "عضویت در کلاس"}
-                        </Button>
-                    </Grid>
+                    {
+                        showAddButton && (
+                            <Grid item>
+                                <Button
+                                    variant={"contained"}
+                                    color={"primary"}
+                                    onClick={() => isInstructor ? openSubmitDialog({}) : openSearchDialog()}
+                                >
+                                    {isInstructor ? "کلاس جدید" : "عضویت در کلاس"}
+                                </Button>
+                            </Grid>
+                        )
+                    }
                 </Grid>
             </div>
             <Grid container spacing={2}>
@@ -96,6 +101,10 @@ const List = (props) => {
             />
         </div>
     );
-}
+};
+
+List.defaultProps = {
+    showAddButton: true,
+};
 
 export default List;

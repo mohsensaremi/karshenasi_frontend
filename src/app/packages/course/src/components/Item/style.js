@@ -16,5 +16,6 @@ export default withStyles(theme => ({
     user: {
         fontSize: 12,
         color: theme.palette.text.secondary,
+        textDecoration: 'underline',
     },
 }), {flip: false});
