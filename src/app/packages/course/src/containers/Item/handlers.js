@@ -1,8 +1,8 @@
 import {withHandlers} from "recompose";
 
 export default withHandlers({
-    onSuccess: ({setData}) => () => {
-        setData(x => ({
+    onSuccess: ({setLocalData}) => () => {
+        setLocalData(x => ({
             ...x,
             userIsMember: true,
         }));

@@ -11,7 +11,7 @@ export default compose(
     store,
     withProps(props => ({
         name: "listFetch",
-        url: `/post/posts-by-course-id?courseId=${props.courseId}&type=${props.match.params.type}`,
+        url: `/post/by-course-id?courseId=${props.courseId}&type=${props.match.params.type}`,
         searchColumns: ["title"],
         limit: 10,
         paging: "append",

@@ -24,7 +24,7 @@ const Item = (props) => {
         userIsMember,
         openJoinDialog,
     } = props;
-
+    
     return (
         <Paper className={classes.root}>
             <Typography className={classes.title}>

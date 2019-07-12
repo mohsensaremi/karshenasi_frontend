@@ -1,11 +1,6 @@
 import {withHandlers} from "recompose";
 import debounce from 'lodash/debounce';
 
-const mergeSettings = (newSettings) => (settings) => ({
-    ...settings,
-    ...newSettings,
-});
-
 export default withHandlers({
     appendData: ({setData, settings}) => (data) => {
         setData(x => ([

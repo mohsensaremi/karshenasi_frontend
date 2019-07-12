@@ -5,7 +5,7 @@ import network from "app/network";
 export default compose(
     network(props => {
         return {
-            fetch: `/course/single?id=${props.match.params.id}&withUser=true`,
+            fetch: `/course/by-id?id=${props.match.params.id}&withUser=true`,
         }
     }),
 )(CourseSingle);
