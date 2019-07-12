@@ -5,7 +5,7 @@ export default withHandlers({
         return postHttp('/post/submit', {...data, type, courseId}).then(res => {
             onClose();
             if (typeof onSuccess === 'function') {
-                onSuccess(res.data.data);
+                onSuccess(res.data);
             }
         });
     },

@@ -15,8 +15,8 @@ export default compose(
         componentDidUpdate() {
             if (!this.props.meFetch.pending) {
                 this.props.setItem('meLoading', false);
-                if (this.props.meFetch.fulfilled && this.props.meFetch.value && this.props.meFetch.value.data && this.props.meFetch.value.data.me) {
-                    this.props.setItem('me', this.props.meFetch.value.data.me);
+                if (this.props.meFetch.fulfilled && this.props.meFetch.value && this.props.meFetch.value.me && this.props.meFetch.value) {
+                    this.props.setItem('me', this.props.meFetch.value.me);
                 }
             }
         },

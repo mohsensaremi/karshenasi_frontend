@@ -13,8 +13,8 @@ export default function () {
             })
                 .then(res => {
                     if (res.data.status === 200) {
-                        window.localStorage.setItem(process.env.REACT_APP_ACCESS_TOKEN_NAME, res.data.data.token);
-                        resolve(res.data.data.token);
+                        window.localStorage.setItem(process.env.REACT_APP_ACCESS_TOKEN_NAME, res.data.token);
+                        resolve(res.data.token);
                     } else {
                         window.location.href = urlJoin(process.env.REACT_APP_URL, '/login');
                         window.localStorage.removeItem(process.env.REACT_APP_ACCESS_TOKEN_NAME);

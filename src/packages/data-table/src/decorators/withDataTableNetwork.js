@@ -47,8 +47,8 @@ export default compose(
             const prevTableFetch = prevProps && prevProps[this.props.name];
 
             if (prevTableFetch && prevTableFetch.fulfilled !== tableFetch.fulfilled && tableFetch.value && tableFetch.value.data) {
-                if (tableFetch.value.data.data) {
-                    const newData = tableFetch.value.data.data;
+                if (tableFetch.value.data) {
+                    const newData = tableFetch.value.data;
                     if (settings.forwardPaging) {
                         setData(x => ([...x, ...newData]));
                     } else if (settings.backwardPaging) {
@@ -57,8 +57,8 @@ export default compose(
                         setData(newData);
                     }
                 }
-                if (tableFetch.value.data.total) {
-                    setTotal(tableFetch.value.data.total);
+                if (tableFetch.value.total) {
+                    setTotal(tableFetch.value.total);
                 }
             }
         }

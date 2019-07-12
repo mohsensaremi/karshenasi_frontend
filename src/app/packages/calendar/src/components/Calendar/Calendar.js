@@ -35,7 +35,7 @@ const Calendar = (props) => {
                         <Typography variant={"h1"}>
                             {
                                 fetch.fulfilled && (
-                                    fetch.value.data.monthName
+                                    fetch.value.monthName
                                 )
                             }
                         </Typography>
@@ -61,7 +61,7 @@ const Calendar = (props) => {
                                     [0, 1, 2, 3, 4, 5, 6].map(col => {
                                         let data = null;
                                         if (fetch.fulfilled) {
-                                            data = fetch.value.data.data[row][col];
+                                            data = fetch.value.data[row][col];
                                         }
 
                                         return (

@@ -17,10 +17,10 @@ export default compose(
                             messages: [res.message],
                         });
                     } else if (res && res.data && res.data.status !== 200) {
-                        if (res.data.data && res.data.data.errors) {
+                        if (res.data && res.data.errors) {
                             openToast({
                                 variant: 'error',
-                                messages: res.data.data.errors,
+                                messages: res.data.errors,
                             });
                         }
                     }
