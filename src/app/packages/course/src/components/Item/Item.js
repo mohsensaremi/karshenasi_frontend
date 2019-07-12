@@ -22,9 +22,11 @@ const Item = (props) => {
         userId,
         user,
         userIsMember,
+        userIsOwner,
+        isInstructor,
         openJoinDialog,
     } = props;
-    
+
     return (
         <Paper className={classes.root}>
             <Typography className={classes.title}>
@@ -72,7 +74,7 @@ const Item = (props) => {
                 </Grid>
                 <Grid item>
                     {
-                        userIsMember ? (
+                        userIsMember || userIsOwner ? (
                             <Button
                                 color={"primary"}
                                 variant={"outlined"}
@@ -81,7 +83,7 @@ const Item = (props) => {
                             >
                                 ورود به کلاس
                             </Button>
-                        ) : (
+                        ) : !isInstructor && (
                             <Button
                                 color={"primary"}
                                 variant={"contained"}
