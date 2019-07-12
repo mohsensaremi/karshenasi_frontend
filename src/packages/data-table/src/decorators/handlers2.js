@@ -1,5 +1,4 @@
 import {withHandlers} from "recompose";
-import debounce from 'lodash/debounce';
 
 export default withHandlers({
     appendData: ({setData, settings}) => (data) => {
@@ -53,7 +52,3 @@ export default withHandlers({
         }
     },
 });
-
-const setStateDebounced = debounce((setState, value) => {
-    setState(value);
-}, 1000);

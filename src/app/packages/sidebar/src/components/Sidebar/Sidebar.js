@@ -3,7 +3,6 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 import SchoolIcon from '@material-ui/icons/School';
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import PersonIcon from '@material-ui/icons/Person';

@@ -24,7 +24,7 @@ const SelectField = (props) => {
         if (variant === "outlined") {
             setLabelWidth(inputLabel.current.offsetWidth);
         }
-    }, []);
+    }, [variant]);
 
     const selectProps = {};
     if (variant === "outlined") {

@@ -2,7 +2,6 @@ import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LoadMe from 'app/packages/auth/src/containers/LoadMe';
-import classnames from 'classnames';
 import Toolbar from 'app/packages/header/src/containers/Toolbar';
 import Sidebar from 'app/packages/sidebar/src/containers/Sidebar';
 import CourseList from 'app/packages/course/src/containers/List';

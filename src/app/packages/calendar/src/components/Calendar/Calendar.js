@@ -116,9 +116,6 @@ const Calendar = (props) => {
             </table>
         </div>
     );
-
-    return null;
-
 };
 
 export default Calendar;

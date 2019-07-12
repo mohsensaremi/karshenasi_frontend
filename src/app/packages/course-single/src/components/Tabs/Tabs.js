@@ -3,7 +3,6 @@ import MuiTabs from '@material-ui/core/Tabs';
 import Grid from '@material-ui/core/Grid';
 import Tab from '@material-ui/core/Tab';
 import SchoolIcon from '@material-ui/icons/School';
-import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import {Link} from 'react-router-dom';
 
 const ITEMS = [
@@ -47,7 +46,6 @@ const Tabs = (props) => {
         activeTab,
     } = props;
 
-    console.log("match", match);
 
     return (
         <MuiTabs

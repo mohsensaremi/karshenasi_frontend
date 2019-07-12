@@ -24,6 +24,7 @@ const Toolbar = (props) => {
                     <img
                         src={logo}
                         className={classes.logo}
+                        alt={"logo"}
                     />
                     دانشگاه خوارزمی
                 </Typography>
