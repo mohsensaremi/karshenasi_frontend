@@ -1,11 +1,13 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from 'utils/redux-form/TextField';
+import DateTimePicker from 'utils/redux-form/DateTimePicker';
 import Checkbox from 'utils/redux-form/Checkbox';
 import Uploader from 'utils/redux-form/Uploader';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
+import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -27,6 +29,7 @@ const SubmitDialog = (props) => {
         onEnter,
         membersLoading,
     } = props;
+
 
     return (
         <Dialog
@@ -56,14 +59,42 @@ const SubmitDialog = (props) => {
                     )
                 }
                 <div style={{display: tab === "general" ? "block" : "none"}}>
-                    <Field
-                        component={TextField}
-                        name={"title"}
-                        margin={"normal"}
-                        fullWidth
-                        label={"عنوان"}
-                        variant="outlined"
-                    />
+                    {
+                        ["project", "assignment"].includes(type) ? (
+                            <Grid
+                                spacing={3}
+                                container
+                            >
+                                <Grid item xs={12} md={6}>
+                                    <Field
+                                        component={TextField}
+                                        name={"title"}
+                                        fullWidth
+                                        label={"عنوان"}
+                                        variant="outlined"
+                                    />
+                                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <Field
+                                        component={DateTimePicker}
+                                        name={"dueDate"}
+                                        fullWidth
+                                        label={"موعد تحویل"}
+                                        variant="outlined"
+                                    />
+                                </Grid>
+                            </Grid>
+                        ) : (
+                            <Field
+                                component={TextField}
+                                name={"title"}
+                                margin={"normal"}
+                                fullWidth
+                                label={"عنوان"}
+                                variant="outlined"
+                            />
+                        )
+                    }
                     <Field
                         component={TextField}
                         name={"content"}

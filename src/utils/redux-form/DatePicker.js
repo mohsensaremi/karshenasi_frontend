@@ -1,10 +1,7 @@
 import {
     DatePicker,
-} from "material-ui-pickers";
+} from "@material-ui/pickers";
 import createComponent from './create-component';
-import moment from "moment";
-
-const defaultValue = moment();
 
 export default createComponent(DatePicker, ({
                                                 componentProps,
