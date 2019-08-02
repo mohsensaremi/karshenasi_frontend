@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from 'utils/redux-form/TextField';
+import UploaderField from 'utils/redux-form/UploaderField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -41,6 +42,11 @@ const SubmitDialog = (props) => {
                     variant="outlined"
                     multiline
                     rows={10}
+                />
+                <Field
+                    component={UploaderField}
+                    name={"files"}
+                    label={"فایل"}
                 />
             </DialogContent>
             <DialogActions>
