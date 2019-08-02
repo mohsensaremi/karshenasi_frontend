@@ -9,7 +9,7 @@ export default createComponent(Checkbox, ({
     return {
         ...componentProps,
         ...inputProps,
-        ...props
+        ...props,
         checked: !!value,
     };
 });

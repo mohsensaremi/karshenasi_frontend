@@ -1,4 +1,4 @@
-import {compose} from "recompose";
+import {compose, withState} from "recompose";
 import SubmitDialog from '../../components/SubmitDialog';
 import {withDialog} from "packages/dialog/src/hoc";
 import {reduxForm} from "redux-form";
@@ -15,5 +15,6 @@ export default compose(
     }),
     withPostHttp,
     store,
+    withState("tab", "setTab", "general"),
     handlers,
 )(SubmitDialog);
