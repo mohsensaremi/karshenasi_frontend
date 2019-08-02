@@ -2,10 +2,11 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from 'utils/redux-form/TextField';
 import Checkbox from 'utils/redux-form/Checkbox';
-import UploaderField from 'utils/redux-form/UploaderField';
+import Uploader from 'utils/redux-form/Uploader';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import {Field} from "redux-form";
@@ -24,6 +25,7 @@ const SubmitDialog = (props) => {
         tab,
         setTab,
         onEnter,
+        membersLoading,
     } = props;
 
     return (
@@ -73,9 +75,8 @@ const SubmitDialog = (props) => {
                         rows={10}
                     />
                     <Field
-                        component={UploaderField}
+                        component={Uploader}
                         name={"files"}
-                        label={"فایل"}
                     />
                 </div>
                 <div style={{display: tab === "members" ? "block" : "none"}}>
@@ -96,14 +97,22 @@ const SubmitDialog = (props) => {
                                         <Field
                                             component={Checkbox}
                                             name={`attendance[${row._id}]`}
+                                            disabled={membersLoading}
                                         />
                                     ) : (
                                         type === "grade" ? (
                                             <Field
                                                 component={TextField}
                                                 name={`grade[${row._id}]`}
-                                                fullWidth
-                                                variant="outlined"
+                                                type={"number"}
+                                                disabled={membersLoading}
+                                                InputProps={{
+                                                    endAdornment: membersLoading && (
+                                                        <CircularProgress
+                                                            size={20}
+                                                        />
+                                                    )
+                                                }}
                                             />
                                         ) : null
                                     )

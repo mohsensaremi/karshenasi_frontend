@@ -16,5 +16,6 @@ export default compose(
     withPostHttp,
     store,
     withState("tab", "setTab", "general"),
+    withState("membersLoading", "setMembersLoading", false),
     handlers,
 )(SubmitDialog);
