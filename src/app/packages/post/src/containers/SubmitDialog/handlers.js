@@ -8,12 +8,12 @@ export default withHandlers({
             setMembersLoading(true);
             switch (type) {
                 case "attendance":
-                    promise = postHttp(`/post/attendances?postId=${postId}`).then(res => {
+                    promise = postHttp(`/post/attendances`, {postId}).then(res => {
                         change("attendance", res.data.data);
                     });
                     break;
                 case "grade":
-                    promise = postHttp(`/post/grades?postId=${postId}`).then(res => {
+                    promise = postHttp(`/post/grades`, {postId}).then(res => {
                         change("grade", res.data.data);
                     });
                     break;
