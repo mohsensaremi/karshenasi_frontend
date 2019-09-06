@@ -74,31 +74,32 @@ const Calendar = (props) => {
                                                             </Typography>
                                                             <div className={classes.eventsWrapper}>
                                                                 {
-                                                                    data.alert1 && (
-                                                                        <Tooltip title={"امتحان سیگنال سیستم"}>
-                                                                            <ErrorIcon
-                                                                                className={classnames(classes.icon, classes.iconAlert1)}
-                                                                            />
-                                                                        </Tooltip>
-                                                                    )
-                                                                }
-                                                                {
-                                                                    data.alert2 && (
-                                                                        <Tooltip title={"تکلیف آزمایشگاه سبستم عامل"}>
-                                                                            <HelpIcon
-                                                                                className={classnames(classes.icon, classes.iconAlert2)}
-                                                                            />
-                                                                        </Tooltip>
-                                                                    )
-                                                                }
-                                                                {
-                                                                    data.alert3 && (
-                                                                        <Tooltip title={"تحویل پروژه معماری کامپیوتر"}>
-                                                                            <ErrorIcon
-                                                                                className={classnames(classes.icon, classes.iconAlert3)}
-                                                                            />
-                                                                        </Tooltip>
-                                                                    )
+                                                                    Array.isArray(data.alert) && data.alert.map((a, index) => {
+                                                                        let Icon = null;
+                                                                        let className = null;
+                                                                        switch (a.type) {
+                                                                            case 1:
+                                                                                className = classes.iconAlert1;
+                                                                                Icon = ErrorIcon;
+                                                                                break;
+                                                                            case 2:
+                                                                                className = classes.iconAlert2;
+                                                                                Icon = ErrorIcon;
+                                                                                break;
+                                                                            case 3:
+                                                                                className = classes.iconAlert3;
+                                                                                Icon = HelpIcon;
+                                                                                break;
+                                                                        }
+
+                                                                        return (
+                                                                            <Tooltip title={a.text} key={index}>
+                                                                                <Icon
+                                                                                    className={classnames(classes.icon, className)}
+                                                                                />
+                                                                            </Tooltip>
+                                                                        );
+                                                                    })
                                                                 }
                                                             </div>
                                                         </React.Fragment>
