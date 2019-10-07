@@ -9,6 +9,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import {Link} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const Sidebar = (props) => {
 
@@ -16,27 +18,28 @@ const Sidebar = (props) => {
         classes,
         me,
         onClickLogout,
+        intl: {formatMessage},
     } = props;
 
     const buttons = [
         {
-            label: "کلاس های من",
+            value: "myCourses",
             icon: SchoolIcon,
             component: Link,
             to: "/courses",
         },
         {
-            label: "در یک نگاه",
+            value: "calendar",
             icon: CastForEducationIcon,
             component: Link,
             to: "/calendar",
         },
         {
-            label: "ویرایش پروفایل",
+            value: "editProfile",
             icon: PersonIcon,
         },
         {
-            label: "خروج",
+            value: "logout",
             icon: PowerSettingsNewIcon,
             onClick: onClickLogout
         },
@@ -70,13 +73,13 @@ const Sidebar = (props) => {
 
                         return (
                             <Button
-                                key={index}
+                                key={button.value}
                                 fullWidth
                                 className={classes.button}
                                 {...buttonProps}
                             >
                                 <Icon className={classes.buttonIcon}/>
-                                {button.label}
+                                {formatMessage(messages[button.value])}
                             </Button>
                         );
                     })
@@ -84,6 +87,6 @@ const Sidebar = (props) => {
             </Paper>
         </div>
     );
-}
+};
 
-export default Sidebar;
+export default injectIntl(Sidebar);

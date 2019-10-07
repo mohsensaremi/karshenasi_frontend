@@ -170,4 +170,28 @@ export default defineMessages({
         id: 'postSubmitDialogGrade',
         defaultMessage: 'grade'
     },
+    myCourses: {
+        id: 'myCourses',
+        defaultMessage: 'my courses'
+    },
+    calendar: {
+        id: 'calendar',
+        defaultMessage: 'calendar'
+    },
+    editProfile: {
+        id: 'editProfile',
+        defaultMessage: 'edit profile'
+    },
+    logout: {
+        id: 'logout',
+        defaultMessage: 'logout'
+    },
+    uploadHint: {
+        id: 'uploadHint',
+        defaultMessage: 'drag here to upload file'
+    },
+    uploadButtonText: {
+        id: 'uploadButtonText',
+        defaultMessage: 'choose file'
+    },
 });

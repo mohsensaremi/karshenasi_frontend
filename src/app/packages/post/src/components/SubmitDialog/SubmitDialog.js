@@ -112,6 +112,8 @@ const SubmitDialog = (props) => {
                     <Field
                         component={Uploader}
                         name={"files"}
+                        uploadHint={formatMessage(messages.uploadHint)}
+                        uploadButtonText={formatMessage(messages.uploadButtonText)}
                     />
                 </div>
                 <div style={{display: tab === "members" ? "block" : "none"}}>
