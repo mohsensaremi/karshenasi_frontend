@@ -8,6 +8,9 @@ import SearchDialog from '../../containers/SearchDialog';
 import JoinDialog from '../../containers/JoinDialog';
 import Item from '../../containers/Item';
 import Loading1 from 'packages/loading/src/components/Loading1';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
+import capitalize from 'lodash/capitalize';
 
 const List = (props) => {
 
@@ -25,6 +28,7 @@ const List = (props) => {
         isInstructor,
         showAddButton,
         settings,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -33,7 +37,7 @@ const List = (props) => {
                 <Grid container spacing={1} alignItems={"center"} justify={"space-between"}>
                     <Grid item>
                         <TextField
-                            label={"جستجو"}
+                            label={capitalize(formatMessage(messages.search))}
                             onChange={onChangeSearch}
                             value={searchInput}
                         />
@@ -46,7 +50,7 @@ const List = (props) => {
                                     color={"primary"}
                                     onClick={() => isInstructor ? openSubmitDialog({}) : openSearchDialog()}
                                 >
-                                    {isInstructor ? "کلاس جدید" : "عضویت در کلاس"}
+                                    {isInstructor ? formatMessage(messages.newCourse) : formatMessage(messages.joinCourse)}
                                 </Button>
                             </Grid>
                         )
@@ -63,9 +67,9 @@ const List = (props) => {
                                 <Typography align={"center"} color={"textSecondary"}>
                                     {
                                         isInstructor ? (
-                                            "شما هیج کلاسی نساخته اید"
+                                            capitalize(formatMessage(messages.dontHaveAnyCourse))
                                         ) : (
-                                            "شما در هیچ کلاسی عضو نیستید"
+                                            capitalize(formatMessage(messages.dontJoinAnyCourse))
                                         )
                                     }
                                 </Typography>
@@ -75,7 +79,7 @@ const List = (props) => {
                                     onClick={() => isInstructor ? openSubmitDialog({}) : openSearchDialog()}
                                     className={classes.hintButton}
                                 >
-                                    {isInstructor ? "کلاس جدید" : "عضویت در کلاس"}
+                                    {isInstructor ? formatMessage(messages.newCourse) : formatMessage(messages.joinCourse)}
                                 </Button>
                             </div>
                         </Grid>
@@ -117,7 +121,7 @@ const List = (props) => {
                         color={"primary"}
                         className={classes.button}
                     >
-                        بیشتر
+                        formatMessage(messages.loadMore)
                     </Button>
                 )
             }
@@ -136,4 +140,4 @@ List.defaultProps = {
     showAddButton: true,
 };
 
-export default List;
+export default injectIntl(List);

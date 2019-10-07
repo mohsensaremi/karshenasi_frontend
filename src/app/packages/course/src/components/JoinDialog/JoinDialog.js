@@ -5,6 +5,9 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import Loading from 'packages/loading/src/components/Loading1';
 import Button from "@material-ui/core/Button";
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
+import capitalize from 'lodash/capitalize';
 
 const JoinDialog = (props) => {
 
@@ -17,6 +20,7 @@ const JoinDialog = (props) => {
         hasPassword,
         onSubmit,
         onEnter,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -34,7 +38,7 @@ const JoinDialog = (props) => {
                             autoFocus
                             margin={"normal"}
                             fullWidth
-                            label={"کلمه عبور کلاس"}
+                            label={capitalize(formatMessage(messages.coursePassword))}
                             variant="outlined"
                             value={password}
                             onChange={event => setPassword(event.target.value)}
@@ -56,13 +60,13 @@ const JoinDialog = (props) => {
                             variant={"outlined"}
                             disabled={loading}
                         >
-                            ثبت
+                            {formatMessage(messages.submit)}
                         </Button>
                     </DialogActions>
                 )
             }
         </Dialog>
     );
-}
+};
 
-export default JoinDialog;
+export default injectIntl(JoinDialog);

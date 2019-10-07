@@ -10,6 +10,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import DialogContent from '@material-ui/core/DialogContent';
 import Loading from 'packages/loading/src/components/Loading1';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
+import capitalize from 'lodash/capitalize';
 
 const SearchDialog = (props) => {
 
@@ -21,6 +24,7 @@ const SearchDialog = (props) => {
         onChangeInput,
         searchFetch,
         openJoinDialog,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -35,7 +39,7 @@ const SearchDialog = (props) => {
                     autoFocus
                     margin={"normal"}
                     fullWidth
-                    label={"جستجو عنوان کلاس"}
+                    label={capitalize(formatMessage(messages.searchCourseTitle))}
                     variant="outlined"
                     value={input}
                     onChange={onChangeInput}
@@ -49,7 +53,7 @@ const SearchDialog = (props) => {
                                 searchFetch.fulfilled && (
                                     input && searchFetch.value.data.length === 0 ? (
                                         <Typography className={classes.notResult}>
-                                            کلاس یافت نشد
+                                            {formatMessage(messages.noDataFound)}
                                         </Typography>
                                     ) : (
                                         searchFetch.value.data.map(item => {
@@ -85,6 +89,6 @@ const SearchDialog = (props) => {
             </DialogContent>
         </Dialog>
     );
-}
+};
 
-export default SearchDialog;
+export default injectIntl(SearchDialog);

@@ -8,6 +8,9 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import {Field} from "redux-form";
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
+import capitalize from 'lodash/capitalize';
 
 const SubmitDialog = (props) => {
 
@@ -19,6 +22,7 @@ const SubmitDialog = (props) => {
         onClose,
         hasPassword,
         change,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -34,13 +38,13 @@ const SubmitDialog = (props) => {
                     name={"title"}
                     margin={"normal"}
                     fullWidth
-                    label={"عنوان"}
+                    label={capitalize(formatMessage(messages.title))}
                     variant="outlined"
                 />
                 <FormGroup>
                     <FormControlLabel
                         control={<Switch checked={hasPassword} onChange={() => change('hasPassword', !hasPassword)}/>}
-                        label="عضویت در کلاس با وارد کلمه عبور باشد"
+                        label={formatMessage(messages.jointCourseWithPassword)}
                     />
                 </FormGroup>
                 {
@@ -51,7 +55,7 @@ const SubmitDialog = (props) => {
                             type={"password"}
                             margin={"normal"}
                             fullWidth
-                            label={"کلمه عبور"}
+                            label={capitalize(formatMessage(messages.password))}
                             variant="outlined"
                         />
                     )
@@ -64,11 +68,11 @@ const SubmitDialog = (props) => {
                     variant={"outlined"}
                     disabled={submitting}
                 >
-                    ثبت
+                    {formatMessage(messages.submit)}
                 </Button>
             </DialogActions>
         </Dialog>
     );
-}
+};
 
-export default SubmitDialog;
+export default injectIntl(SubmitDialog);

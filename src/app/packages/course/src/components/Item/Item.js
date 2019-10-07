@@ -9,6 +9,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import {Link} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import FaceIcon from '@material-ui/icons/Face';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const Item = (props) => {
 
@@ -25,6 +27,7 @@ const Item = (props) => {
         userIsOwner,
         isInstructor,
         openJoinDialog,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -81,7 +84,7 @@ const Item = (props) => {
                                 component={Link}
                                 to={`/course/${id}`}
                             >
-                                ورود به کلاس
+                                {formatMessage(messages.enterCourse)}
                             </Button>
                         ) : !isInstructor && (
                             <Button
@@ -89,7 +92,7 @@ const Item = (props) => {
                                 variant={"contained"}
                                 onClick={openJoinDialog}
                             >
-                                عضویت کلاس
+                                {formatMessage(messages.joinCourse)}
                             </Button>
                         )
                     }
@@ -97,6 +100,6 @@ const Item = (props) => {
             </Grid>
         </Paper>
     );
-}
+};
 
-export default Item;
+export default injectIntl(Item);
