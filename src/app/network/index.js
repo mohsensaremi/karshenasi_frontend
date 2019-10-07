@@ -1,6 +1,7 @@
 import {connect} from 'react-refetch'
 import urlJoin from 'url-join';
 import refreshToken from './refreshToken';
+import {locale} from 'utils/utils/locale';
 
 export default connect.defaults({
     fetch: function (input, init) {
@@ -42,6 +43,6 @@ export default connect.defaults({
             body: mapping.body
         };
 
-        return new Request(urlJoin(process.env.REACT_APP_API_URL, mapping.url), options);
+        return new Request(urlJoin(process.env.REACT_APP_API_URL, mapping.url, `?hl=${locale}`), options);
     },
 });
