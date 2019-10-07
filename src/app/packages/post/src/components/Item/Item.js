@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const Item = (props) => {
 
@@ -17,6 +19,7 @@ const Item = (props) => {
         openSubmitDialog,
         data,
         me,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -35,7 +38,7 @@ const Item = (props) => {
                                 variant={"outlined"}
                                 onClick={onClickDetail}
                             >
-                                جزییات
+                                {formatMessage(messages.details)}
                             </Button>
                         </Grid>
                         {
@@ -60,6 +63,6 @@ const Item = (props) => {
             </Grid>
         </Paper>
     );
-}
+};
 
-export default Item;
+export default injectIntl(Item);

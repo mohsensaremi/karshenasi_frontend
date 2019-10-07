@@ -1,4 +1,5 @@
 import {defineMessages} from "react-intl";
+import SchoolIcon from "@material-ui/core/SvgIcon/SvgIcon";
 
 export default defineMessages({
     email: {
@@ -100,5 +101,73 @@ export default defineMessages({
     title: {
         id: 'title',
         defaultMessage: 'title'
+    },
+    name: {
+        id: 'name',
+        defaultMessage: 'name'
+    },
+    fresh: {
+        id: 'fresh',
+        defaultMessage: 'fresh'
+    },
+    alert: {
+        id: 'alert',
+        defaultMessage: 'alert'
+    },
+    assignment: {
+        id: 'assignment',
+        defaultMessage: 'assignment'
+    },
+    attendance: {
+        id: 'attendance',
+        defaultMessage: 'attendance'
+    },
+    project: {
+        id: 'project',
+        defaultMessage: 'project'
+    },
+    grade: {
+        id: 'grade',
+        defaultMessage: 'grade'
+    },
+    details: {
+        id: 'details',
+        defaultMessage: 'details'
+    },
+    newPost: {
+        id: 'newPost',
+        defaultMessage: 'new post'
+    },
+    notPostOwner: {
+        id: 'notPostOwner',
+        defaultMessage: 'you don\'t publish any post'
+    },
+    notPostMember: {
+        id: 'notPostMember',
+        defaultMessage: 'no post published'
+    },
+    postSubmitDialogTabGeneral: {
+        id: 'postSubmitDialogTabGeneral',
+        defaultMessage: 'general'
+    },
+    postSubmitDialogTabMembers: {
+        id: 'postSubmitDialogTabMembers',
+        defaultMessage: 'members'
+    },
+    dueDate: {
+        id: 'dueDate',
+        defaultMessage: 'due date'
+    },
+    content: {
+        id: 'content',
+        defaultMessage: 'content'
+    },
+    postSubmitDialogAttendance: {
+        id: 'postSubmitDialogAttendance',
+        defaultMessage: 'attendance'
+    },
+    postSubmitDialogGrade: {
+        id: 'postSubmitDialogGrade',
+        defaultMessage: 'grade'
     },
 });

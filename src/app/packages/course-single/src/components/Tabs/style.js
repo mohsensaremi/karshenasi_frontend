@@ -6,6 +6,6 @@ export default withStyles(theme => ({
         minWidth: 0,
     },
     icon: {
-        marginRight: theme.spacing(0.5),
+
     },
 }));

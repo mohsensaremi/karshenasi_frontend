@@ -14,6 +14,9 @@ import Tab from '@material-ui/core/Tab';
 import {Field} from "redux-form";
 import Members from "app/packages/course-single/src/containers/Members";
 import TableCell from '@material-ui/core/TableCell';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
+import capitalize from 'lodash/capitalize';
 
 const SubmitDialog = (props) => {
 
@@ -28,6 +31,7 @@ const SubmitDialog = (props) => {
         setTab,
         onEnter,
         membersLoading,
+        intl: {formatMessage},
     } = props;
 
 
@@ -49,11 +53,11 @@ const SubmitDialog = (props) => {
                         >
                             <Tab
                                 value={"general"}
-                                label={"اطلاعات کلی"}
+                                label={formatMessage(messages.postSubmitDialogTabGeneral)}
                             />
                             <Tab
                                 value={"members"}
-                                label={"لیست دانشجویان"}
+                                label={formatMessage(messages.postSubmitDialogTabMembers)}
                             />
                         </Tabs>
                     )
@@ -70,7 +74,7 @@ const SubmitDialog = (props) => {
                                         component={TextField}
                                         name={"title"}
                                         fullWidth
-                                        label={"عنوان"}
+                                        label={capitalize(formatMessage(messages.title))}
                                         variant="outlined"
                                     />
                                 </Grid>
@@ -79,7 +83,7 @@ const SubmitDialog = (props) => {
                                         component={DateTimePicker}
                                         name={"dueDate"}
                                         fullWidth
-                                        label={"موعد تحویل"}
+                                        label={capitalize(formatMessage(messages.dueDate))}
                                         variant="outlined"
                                     />
                                 </Grid>
@@ -90,7 +94,7 @@ const SubmitDialog = (props) => {
                                 name={"title"}
                                 margin={"normal"}
                                 fullWidth
-                                label={"عنوان"}
+                                label={capitalize(formatMessage(messages.title))}
                                 variant="outlined"
                             />
                         )
@@ -100,7 +104,7 @@ const SubmitDialog = (props) => {
                         name={"content"}
                         margin={"normal"}
                         fullWidth
-                        label={"توضیحات"}
+                        label={capitalize(formatMessage(messages.content))}
                         variant="outlined"
                         multiline
                         rows={10}
@@ -115,8 +119,8 @@ const SubmitDialog = (props) => {
                         extraHead={(
                             <TableCell>
                                 {
-                                    type === "attendance" ? "حاضز" : (
-                                        type === "grade" ? "نمره" : ""
+                                    type === "attendance" ? formatMessage(messages.postSubmitDialogAttendance) : (
+                                        type === "grade" ? formatMessage(messages.postSubmitDialogGrade) : ""
                                     )
                                 }
                             </TableCell>
@@ -160,11 +164,11 @@ const SubmitDialog = (props) => {
                     variant={"outlined"}
                     disabled={submitting}
                 >
-                    ثبت
+                    {formatMessage(messages.submit)}
                 </Button>
             </DialogActions>
         </Dialog>
     );
-}
+};
 
-export default SubmitDialog;
+export default injectIntl(SubmitDialog);

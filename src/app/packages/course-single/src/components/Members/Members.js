@@ -5,6 +5,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const Members = (props) => {
 
@@ -13,6 +15,7 @@ const Members = (props) => {
         fetch,
         extraBody,
         extraHead,
+        intl: {formatMessage},
     } = props;
 
     if (fetch.pending) {
@@ -28,7 +31,7 @@ const Members = (props) => {
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow>
-                            <TableCell>نام</TableCell>
+                            <TableCell>{formatMessage(messages.name)}</TableCell>
                             {
                                 extraHead
                             }
@@ -54,4 +57,4 @@ const Members = (props) => {
     return null;
 };
 
-export default Members;
+export default injectIntl(Members);

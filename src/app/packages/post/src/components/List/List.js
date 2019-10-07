@@ -8,6 +8,8 @@ import Item from '../../containers/Item';
 import SubmitDialog from '../../containers/SubmitDialog';
 import DetailDialog from '../../containers/DetailDialog';
 import Loading1 from "packages/loading/src/components/Loading1";
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const List = (props) => {
 
@@ -24,6 +26,7 @@ const List = (props) => {
         listFetch,
         onNextPage,
         hasNext,
+        intl: {formatMessage},
     } = props;
 
 
@@ -38,7 +41,7 @@ const List = (props) => {
                 <Grid container spacing={1} alignItems={"center"} justify={"space-between"}>
                     <Grid item>
                         <TextField
-                            label={"جستجو"}
+                            label={formatMessage(messages.search)}
                             onChange={onChangeSearch}
                             value={searchInput}
                         />
@@ -51,7 +54,7 @@ const List = (props) => {
                                     color={"primary"}
                                     onClick={() => openSubmitDialog({})}
                                 >
-                                    مطلب جدید
+                                    {formatMessage(messages.newPost)}
                                 </Button>
                             )
                         }
@@ -67,9 +70,9 @@ const List = (props) => {
                             <Typography align={"center"} color={"textSecondary"}>
                                 {
                                     isOwner ? (
-                                        "شما هیج مطلبی منتشر نکرده اید"
+                                        formatMessage(messages.notPostOwner)
                                     ) : (
-                                        "مطلبی موجود نمی باشد"
+                                        formatMessage(messages.notPostMember)
                                     )
                                 }
                             </Typography>
@@ -81,7 +84,7 @@ const List = (props) => {
                                         onClick={() => openSubmitDialog({})}
                                         className={classes.hintButton}
                                     >
-                                        مطلب جدید
+                                        {formatMessage(messages.newPost)}
                                     </Button>
                                 )
                             }
@@ -117,7 +120,7 @@ const List = (props) => {
                         color={"primary"}
                         className={classes.button}
                     >
-                        بیشتر
+                        {formatMessage(messages.loadMore)}
                     </Button>
                 )
             }
@@ -127,6 +130,6 @@ const List = (props) => {
             <DetailDialog/>
         </div>
     );
-}
+};
 
-export default List;
+export default injectIntl(List);

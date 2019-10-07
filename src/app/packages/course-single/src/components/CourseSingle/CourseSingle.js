@@ -9,12 +9,14 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Collapse from '@material-ui/core/Collapse';
-import {Link, Switch, Route,Redirect} from 'react-router-dom';
+import {Link, Switch, Route, Redirect} from 'react-router-dom';
 import SubmitDialog from "app/packages/course/src/containers/SubmitDialog";
 import pick from 'lodash/pick';
 import Tabs from '../../containers/Tabs';
 import PostList from 'app/packages/post/src/containers/List';
 import {SetGlobalState} from 'packages/global-state';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const CourseSingle = (props) => {
 
@@ -28,6 +30,7 @@ const CourseSingle = (props) => {
         data,
         match,
         activeTab,
+        intl: {formatMessage},
     } = props;
 
     const [detailExpand, setDetailExpand] = useState(false);
@@ -84,7 +87,7 @@ const CourseSingle = (props) => {
                         <tr>
                             <td>
                                 <Typography className={classes.tableTitle}>
-                                    مدرس
+                                    {formatMessage(messages.instructor)}
                                 </Typography>
                             </td>
                             <td>
@@ -122,7 +125,7 @@ const CourseSingle = (props) => {
                     component={PostList}
                 />
                 <Redirect
-                to={`${match.url}/fresh`}
+                    to={`${match.url}/fresh`}
                 />
             </Switch>
             <SubmitDialog
@@ -130,6 +133,6 @@ const CourseSingle = (props) => {
             />
         </React.Fragment>
     );
-}
+};
 
-export default CourseSingle;
+export default injectIntl(CourseSingle);

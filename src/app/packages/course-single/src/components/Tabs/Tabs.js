@@ -4,36 +4,32 @@ import Grid from '@material-ui/core/Grid';
 import Tab from '@material-ui/core/Tab';
 import SchoolIcon from '@material-ui/icons/School';
 import {Link} from 'react-router-dom';
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
 const ITEMS = [
     {
         value: 'fresh',
-        label: 'تاره ها',
         icon: SchoolIcon,
     },
     {
         value: 'alert',
-        label: 'اطلاعیه ها',
         icon: SchoolIcon,
     },
     {
         value: 'assignment',
-        label: 'تکالیف',
         icon: SchoolIcon,
     },
     {
         value: 'attendance',
-        label: 'حضور و غیاب',
         icon: SchoolIcon,
     },
     {
         value: 'project',
-        label: 'پروژه ها',
         icon: SchoolIcon,
     },
     {
         value: 'grade',
-        label: 'لیست نمرات',
         icon: SchoolIcon,
     },
 ];
@@ -44,6 +40,7 @@ const Tabs = (props) => {
         classes,
         match,
         activeTab,
+        intl: {formatMessage},
     } = props;
 
 
@@ -69,10 +66,10 @@ const Tabs = (props) => {
                             }}
                             component={Link}
                             to={`${match.url}/${item.value}`}
+                            icon={<Icon className={classes.icon}/>}
                             label={(
                                 <Grid container alignItems={"center"} justify={"center"}>
-                                    <Icon className={classes.icon}/>
-                                    {item.label}
+                                    {formatMessage(messages[item.value])}
                                 </Grid>
                             )}
                         />
@@ -81,6 +78,6 @@ const Tabs = (props) => {
             }
         </MuiTabs>
     );
-}
+};
 
-export default Tabs;
+export default injectIntl(Tabs);
