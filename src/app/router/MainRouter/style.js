@@ -11,4 +11,4 @@ export default withStyles(theme => ({
     tabs: {
         marginBottom: theme.spacing(2),
     },
-}), {flip: false});
+}));

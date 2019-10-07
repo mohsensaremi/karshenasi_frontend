@@ -26,4 +26,4 @@ export default withStyles(theme => ({
         textAlign: 'center',
         fontSize: 10,
     },
-}), {flip: false});
+}));

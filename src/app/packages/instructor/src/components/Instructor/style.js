@@ -12,6 +12,6 @@ export default withStyles(theme => ({
         textDecoration: 'underline',
     },
     avatar: {
-        marginLeft: theme.spacing(),
+        marginRight: theme.spacing(),
     },
-}), {flip: false});
+}));

@@ -14,4 +14,4 @@ export default withStyles(theme => ({
     paperScrollPaper: {
         minHeight: 'calc(100% - 96px)',
     },
-}), {flip: false});
+}));

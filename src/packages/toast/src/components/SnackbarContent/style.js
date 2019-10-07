@@ -20,7 +20,7 @@ export default withStyles(theme => ({
     },
     iconVariant: {
         opacity: 0.9,
-        marginLeft: theme.spacing(),
+        marginRight: theme.spacing(),
     },
     message: {
         display: 'flex',
@@ -28,4 +28,4 @@ export default withStyles(theme => ({
         whiteSpace: 'pre-line',
         fontFamily: 'IRANSans',
     },
-}), {flip: false});
+}));

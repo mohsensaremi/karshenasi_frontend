@@ -16,7 +16,7 @@ export default withStyles(theme => ({
         backgroundColor: theme.palette.primary.main,
     },
     type: {
-        marginRight: theme.spacing(0.5),
+        marginLeft: theme.spacing(0.5),
         color: theme.palette.text.secondary,
         fontSize: 11,
     },
@@ -25,6 +25,6 @@ export default withStyles(theme => ({
     },
     buttonIcon:{
         color:theme.palette.primary.main,
-        marginLeft:theme.spacing(),
+        marginRight:theme.spacing(),
     },
-}), {flip: false});
+}));

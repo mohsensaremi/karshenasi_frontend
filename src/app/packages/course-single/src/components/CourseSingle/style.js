@@ -6,7 +6,7 @@ export default withStyles(theme => ({
         marginBottom: theme.spacing(2),
     },
     titleIcon: {
-        marginLeft: theme.spacing(0.5),
+        marginRight: theme.spacing(0.5),
     },
     table: {
         marginTop: theme.spacing(2),
@@ -15,7 +15,7 @@ export default withStyles(theme => ({
         width: 28,
         height: 28,
         fontSize: 12,
-        marginLeft: theme.spacing(0.5),
+        marginRight: theme.spacing(0.5),
         backgroundColor: theme.palette.primary.main,
     },
     tableTitle: {
@@ -25,10 +25,10 @@ export default withStyles(theme => ({
         textDecoration: 'underline',
     },
     actions: {
-        marginRight: theme.spacing(),
+        marginLeft: theme.spacing(),
     },
     tabWrapper: {
         borderTop: `1px solid ${theme.palette.divider}`,
         margin: theme.spacing(2, -2, -2, -2),
     },
-}), {flip: false});
+}));

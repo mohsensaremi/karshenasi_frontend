@@ -11,15 +11,15 @@ export default withStyles(theme => ({
     day: {
         position: 'absolute',
         top: 4,
-        left: 4,
+        right: 4,
     },
     eventsWrapper: {
         position: 'absolute',
         bottom: 0,
-        right: 0,
+        left: 0,
     },
     icon: {
-        marginLeft: 2,
+        marginRight: 2,
     },
     iconAlert1: {
         color: theme.palette.error.main,
@@ -33,4 +33,4 @@ export default withStyles(theme => ({
     header: {
         marginBottom: theme.spacing(2),
     },
-}), {flip: false});
+}));

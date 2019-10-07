@@ -4,4 +4,4 @@ export default withStyles(theme => ({
     greyRow: {
         backgroundColor: theme.palette.grey[200],
     },
-}), {flip: false});
+}));

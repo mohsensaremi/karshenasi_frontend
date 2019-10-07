@@ -20,4 +20,4 @@ export default withStyles({
             margin: 'auto',
         },
     },
-}, {flip: false});
+});

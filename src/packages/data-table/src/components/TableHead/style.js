@@ -3,7 +3,7 @@ import {lighten} from "@material-ui/core/styles/colorManipulator";
 
 export default withStyles(theme => ({
     root: {
-        paddingRight: theme.spacing(),
+        paddingLeft: theme.spacing(),
     },
     highlight:
         theme.palette.type === 'light'
@@ -24,4 +24,4 @@ export default withStyles(theme => ({
     title: {
         flex: '0 0 auto',
     },
-}), {flip: false});
+}));

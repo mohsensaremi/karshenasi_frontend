@@ -4,4 +4,4 @@ export default withStyles(theme => ({
     label: {
         marginBottom: theme.spacing(),
     },
-}), {flip: false});
+}));

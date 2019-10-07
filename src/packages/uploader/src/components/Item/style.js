@@ -18,7 +18,7 @@ export default withStyles(theme => ({
     progressWrapper: {
         position: 'absolute',
         top: 0,
-        right: 0,
+        left: 0,
         width: '100%',
         height: '100%',
         display: 'flex',
@@ -28,7 +28,7 @@ export default withStyles(theme => ({
     overlay: {
         position: 'absolute',
         top: 0,
-        right: 0,
+        left: 0,
         width: '100%',
         height: '100%',
         backgroundColor: theme.palette.action.hover,
@@ -41,7 +41,7 @@ export default withStyles(theme => ({
         color: theme.palette.error.main,
         position: 'absolute',
         top: 0,
-        left: 0,
+        right: 0,
         cursor: 'pointer',
     },
-}), {flip: false});
+}));

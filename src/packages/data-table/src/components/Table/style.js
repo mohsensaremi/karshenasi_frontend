@@ -6,4 +6,4 @@ export default withStyles(theme => ({
     table: {
         textAlign: 'center',
     },
-}), {flip: false});
+}));

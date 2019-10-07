@@ -21,4 +21,4 @@ export default withStyles(theme => ({
     button: {
         marginTop: theme.spacing(2),
     },
-}), {flip: false});
+}));

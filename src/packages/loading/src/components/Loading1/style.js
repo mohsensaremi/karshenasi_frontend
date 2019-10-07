@@ -6,4 +6,4 @@ export default withStyles(theme => ({
         padding: theme.spacing(2),
     },
 
-}), {flip: false});
+}));

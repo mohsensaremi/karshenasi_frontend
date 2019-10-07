@@ -4,4 +4,4 @@ export default withStyles(theme => ({
     margin: {
         margin: theme.spacing(),
     },
-}), {flip: false});
+}));
