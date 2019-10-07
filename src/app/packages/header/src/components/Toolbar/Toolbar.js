@@ -4,11 +4,20 @@ import MuiToolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import logo from 'img/logo-white-2.png';
+import {injectIntl, defineMessages} from "react-intl";
+
+const messages = defineMessages({
+    title: {
+        id: 'header.toolbar.title',
+        defaultMessage: 'Learning management system'
+    },
+});
 
 const Toolbar = (props) => {
 
     const {
-        classes
+        classes,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -26,11 +35,11 @@ const Toolbar = (props) => {
                         className={classes.logo}
                         alt={"logo"}
                     />
-                    دانشگاه خوارزمی
+                    {formatMessage(messages.title)}
                 </Typography>
             </MuiToolbar>
         </AppBar>
     );
-}
+};
 
-export default Toolbar;
+export default injectIntl(Toolbar);

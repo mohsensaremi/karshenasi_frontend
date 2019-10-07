@@ -9,7 +9,7 @@ export default createComponent(SwitchField, ({
     return {
         ...componentProps,
         ...inputProps,
-        ...props
+        ...props,
         checked: !!value,
     };
 });

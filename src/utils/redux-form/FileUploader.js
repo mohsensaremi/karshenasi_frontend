@@ -6,7 +6,7 @@ export default createComponent(FileUploader, ({
     ...props
 }) => {
     return {
-        ...props
+        ...props,
         value: Array.isArray(value) ? value : [],
         onChange,
     }

@@ -1,4 +1,5 @@
 import 'app/style/app.scss';
+import "typeface-roboto";
 import 'app/fonts/IRANSans/css/fontiran.css';
 import 'utils/style/table.scss';
 import React from 'react';

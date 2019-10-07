@@ -1,0 +1,7 @@
+[
+  {
+    "id": "app.title",
+    "defaultMessage": "Learning management system",
+    "filepath": "src/app/packages/header/src/components/Toolbar/Toolbar.js"
+  }
+]

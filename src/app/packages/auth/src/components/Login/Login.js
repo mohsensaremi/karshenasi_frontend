@@ -7,6 +7,9 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {Link} from 'react-router-dom';
+import {injectIntl} from "react-intl";
+import capitalize from 'lodash/capitalize';
+import messages from 'i18n/messages/messages';
 
 function Login(props) {
 
@@ -15,6 +18,7 @@ function Login(props) {
         handleSubmit,
         submitting,
         onSubmit,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -25,7 +29,7 @@ function Login(props) {
                     name={"email"}
                     margin={"normal"}
                     fullWidth
-                    label={"ایمیل"}
+                    label={capitalize(formatMessage(messages.email))}
                     variant="outlined"
                 />
                 <Field
@@ -34,7 +38,7 @@ function Login(props) {
                     type={"password"}
                     margin={"normal"}
                     fullWidth
-                    label={"کلمه عبور"}
+                    label={capitalize(formatMessage(messages.password))}
                     variant="outlined"
                 />
                 <div className={classes.buttonWrapper}>
@@ -46,17 +50,17 @@ function Login(props) {
                                 color={"primary"}
                                 onClick={handleSubmit(onSubmit)}
                             >
-                                ورود
+                                {formatMessage(messages.login)}
                             </Button>
                         </Grid>
                         <Grid item>
                             <Typography variant={"caption"}>
-                                حساب کاربری ندارید؟
+                                {formatMessage(messages.registerMessage)}
                                 <Link
                                     to={"/register"}
                                     className={classes.link}
                                 >
-                                    ثبت نام کنید
+                                    {formatMessage(messages.register)}
                                 </Link>
                             </Typography>
                         </Grid>
@@ -71,4 +75,4 @@ Login.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default Login;
+export default injectIntl(Login);

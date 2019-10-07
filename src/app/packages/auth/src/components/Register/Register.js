@@ -9,6 +9,10 @@ import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import {Link} from "react-router-dom";
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
+import capitalize from 'lodash/capitalize';
+
 
 function Register(props) {
 
@@ -17,6 +21,7 @@ function Register(props) {
         handleSubmit,
         submitting,
         onSubmit,
+        intl: {formatMessage},
     } = props;
 
     return (
@@ -27,7 +32,7 @@ function Register(props) {
                     name={"firstName"}
                     margin={"normal"}
                     fullWidth
-                    label={"نام"}
+                    label={capitalize(formatMessage(messages.firstName))}
                     variant="outlined"
                 />
                 <Field
@@ -35,7 +40,7 @@ function Register(props) {
                     name={"lastName"}
                     margin={"normal"}
                     fullWidth
-                    label={"نام خانوادگی"}
+                    label={capitalize(formatMessage(messages.lastName))}
                     variant="outlined"
                 />
                 <Field
@@ -43,18 +48,18 @@ function Register(props) {
                     name={"type"}
                     margin={"normal"}
                     fullWidth
-                    label={"نوع کاربری"}
+                    label={capitalize(formatMessage(messages.userType))}
                     variant="outlined"
                 >
-                    <MenuItem value={"student"}>دانشجو</MenuItem>
-                    <MenuItem value={"instructor"}>استاد</MenuItem>
+                    <MenuItem value={"student"}>{capitalize(formatMessage(messages.student))}</MenuItem>
+                    <MenuItem value={"instructor"}>{capitalize(formatMessage(messages.instructor))}</MenuItem>
                 </Field>
                 <Field
                     component={TextField}
                     name={"email"}
                     margin={"normal"}
                     fullWidth
-                    label={"ایمیل"}
+                    label={capitalize(formatMessage(messages.email))}
                     variant="outlined"
                 />
                 <Field
@@ -63,7 +68,7 @@ function Register(props) {
                     type={"password"}
                     margin={"normal"}
                     fullWidth
-                    label={"کلمه عبور"}
+                    label={capitalize(formatMessage(messages.password))}
                     variant="outlined"
                 />
                 <Field
@@ -72,7 +77,7 @@ function Register(props) {
                     type={"password"}
                     margin={"normal"}
                     fullWidth
-                    label={"تکرار کلمه عبور"}
+                    label={capitalize(formatMessage(messages.passwordConfirmation))}
                     variant="outlined"
                 />
                 <div className={classes.buttonWrapper}>
@@ -84,17 +89,17 @@ function Register(props) {
                                 color={"primary"}
                                 onClick={handleSubmit(onSubmit)}
                             >
-                                ثبت نام
+                                {formatMessage(messages.register)}
                             </Button>
                         </Grid>
                         <Grid item>
                             <Typography variant={"caption"}>
-                                حساب کاربری دارید؟
+                                {formatMessage(messages.loginMessage)}
                                 <Link
                                     to={"/login"}
                                     className={classes.link}
                                 >
-                                    وارد شوید
+                                    {formatMessage(messages.login)}
                                 </Link>
                             </Typography>
                         </Grid>
@@ -109,4 +114,4 @@ Register.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default Register;
+export default injectIntl(Register);

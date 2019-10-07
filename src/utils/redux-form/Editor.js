@@ -6,7 +6,7 @@ export default createComponent(Editor, ({
     ...props
 }) => {
     return {
-        ...props
+        ...props,
         value,
         onEditorChange: onChange,
     }

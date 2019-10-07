@@ -1,8 +1,9 @@
 import {createMuiTheme} from '@material-ui/core/styles';
 import pink from '@material-ui/core/colors/pink';
+import {locale} from 'utils/utils/locale';
 
 let theme = createMuiTheme({
-    direction: 'rtl',
+    direction: locale === "fa" ? 'rtl' : 'ltr',
     palette: {
         primary: {
             main: pink['A400'],
@@ -15,7 +16,7 @@ let theme = createMuiTheme({
     },
     typography: {
         useNextVariants: true,
-        fontFamily: 'IRANSans',
+        fontFamily: locale === "fa" ? 'IRANSans' : 'Roboto',
         fontSize: 12,
         body2: {
             lineHeight: '24px',
