@@ -33,4 +33,4 @@ export default withStyles(theme => ({
     header: {
         marginBottom: theme.spacing(2),
     },
-}));
+}),{withTheme:true});

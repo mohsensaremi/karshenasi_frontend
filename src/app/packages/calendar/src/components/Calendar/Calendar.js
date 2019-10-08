@@ -16,7 +16,10 @@ const Calendar = (props) => {
         fetch,
         nextMonth,
         prevMonth,
+        theme,
     } = props;
+
+    const isRTL = theme.direction === "rtl";
 
     return (
 
@@ -28,7 +31,13 @@ const Calendar = (props) => {
                             onClick={prevMonth}
                             disabled={!fetch.fulfilled}
                         >
-                            <ChevronRightIcon/>
+                            {
+                                isRTL ? (
+                                    <ChevronRightIcon/>
+                                ) : (
+                                    <ChevronLeftIcon/>
+                                )
+                            }
                         </IconButton>
                     </Grid>
                     <Grid item>
@@ -45,7 +54,13 @@ const Calendar = (props) => {
                             onClick={nextMonth}
                             disabled={!fetch.fulfilled}
                         >
-                            <ChevronLeftIcon/>
+                            {
+                                isRTL ? (
+                                    <ChevronLeftIcon/>
+                                ) : (
+                                    <ChevronRightIcon/>
+                                )
+                            }
                         </IconButton>
                     </Grid>
                 </Grid>
