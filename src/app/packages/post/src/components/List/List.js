@@ -48,7 +48,7 @@ const List = (props) => {
                     </Grid>
                     <Grid item>
                         {
-                            isOwner && (
+                            isOwner && match.params.type !== "fresh" && (
                                 <Button
                                     variant={"contained"}
                                     color={"primary"}
