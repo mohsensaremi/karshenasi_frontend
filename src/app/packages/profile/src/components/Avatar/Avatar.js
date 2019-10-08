@@ -12,8 +12,8 @@ const Avatar = (props) => {
     } = props;
 
     const avatarProps = {};
-    if (me.getIn(["avatar","url"])) {
-        avatarProps.src = me.getIn(["avatar","url"]);
+    if (me.getIn(["avatar", "0", "url"])) {
+        avatarProps.src = me.getIn(["avatar", "0", "url"]);
         avatarProps.alt = `${me.get('firstName')[0]} ${me.get('lastName')[0]}`;
     } else {
         avatarProps.children = `${me.get('firstName')[0]} ${me.get('lastName')[0]}`;
