@@ -78,18 +78,18 @@ const Calendar = (props) => {
                                                                         let Icon = null;
                                                                         let className = null;
                                                                         switch (a.type) {
-                                                                            case 1:
+                                                                            case 'project':
                                                                                 className = classes.iconAlert1;
                                                                                 Icon = ErrorIcon;
                                                                                 break;
-                                                                            case 2:
+                                                                            case 'assignment':
                                                                                 className = classes.iconAlert2;
                                                                                 Icon = ErrorIcon;
                                                                                 break;
-                                                                            case 3:
-                                                                                className = classes.iconAlert3;
-                                                                                Icon = HelpIcon;
-                                                                                break;
+                                                                            // case 3:
+                                                                            //     className = classes.iconAlert3;
+                                                                            //     Icon = HelpIcon;
+                                                                            //     break;
                                                                         }
 
                                                                         return (

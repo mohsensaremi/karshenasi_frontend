@@ -5,6 +5,7 @@ import RTL from 'utils/components/RTL';
 import store from './store';
 import {BrowserRouter} from 'react-router-dom';
 import jMoment from "moment-jalaali";
+import MomentUtils from '@date-io/moment';
 import JalaliUtils from "@date-io/jalaali";
 import {
     MuiPickersUtilsProvider,
@@ -21,7 +22,8 @@ const Boot = () => {
 
     return (
         <IntlProvider locale={locale} key={locale} messages={messages}>
-            <MuiPickersUtilsProvider utils={JalaliUtils} locale="fa">
+
+            <MuiPickersUtilsProvider utils={locale === "fa" ? JalaliUtils : MomentUtils} locale={locale}>
                 <Provider store={store}>
                     <RTL>
                         <React.Fragment>

@@ -15,8 +15,6 @@ const Cover = (props) => {
         style.backgroundImage = `url('${me.getIn(["cover", "0", "url"])}')`;
     }
 
-    console.log("style", style);
-
     return (
         <div
             className={classnames(classes.root, className)}
