@@ -43,6 +43,7 @@ class Item extends React.Component {
                 onChange(id)({
                     uploading: false,
                     name: res.data.data.name,
+                    fileName: res.data.data.fileName,
                 });
             }
         }).catch(err => {

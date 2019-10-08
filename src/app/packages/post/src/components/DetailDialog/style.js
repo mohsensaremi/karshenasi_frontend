@@ -14,4 +14,7 @@ export default withStyles(theme => ({
     paperScrollPaper: {
         minHeight: 'calc(100% - 96px)',
     },
+    listItem: {
+        borderTop: `1px solid ${theme.palette.grey[400]}`,
+    },
 }));
