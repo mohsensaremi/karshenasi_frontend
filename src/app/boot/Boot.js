@@ -21,20 +21,21 @@ const Boot = () => {
     const messages = translations[locale];
 
     return (
-        <IntlProvider locale={locale} key={locale} messages={messages}>
-
-            <MuiPickersUtilsProvider utils={locale === "fa" ? JalaliUtils : MomentUtils} locale={locale}>
-                <Provider store={store}>
-                    <RTL>
-                        <React.Fragment>
-                            <BrowserRouter>
-                                <Router/>
-                            </BrowserRouter>
-                        </React.Fragment>
-                    </RTL>
-                </Provider>
-            </MuiPickersUtilsProvider>
-        </IntlProvider>
+        <div dir={locale === "fa" ? "rtl" : "ltr"}>
+            <IntlProvider locale={locale} key={locale} messages={messages}>
+                <MuiPickersUtilsProvider utils={locale === "fa" ? JalaliUtils : MomentUtils} locale={locale}>
+                    <Provider store={store}>
+                        <RTL>
+                            <React.Fragment>
+                                <BrowserRouter>
+                                    <Router/>
+                                </BrowserRouter>
+                            </React.Fragment>
+                        </RTL>
+                    </Provider>
+                </MuiPickersUtilsProvider>
+            </IntlProvider>
+        </div>
     );
 };
 
