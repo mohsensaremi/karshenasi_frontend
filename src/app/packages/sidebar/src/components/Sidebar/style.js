@@ -11,9 +11,7 @@ export default withStyles(theme => ({
         marginBottom: theme.spacing(2),
     },
     avatar: {
-        fontSize: 14,
         marginBottom: theme.spacing(),
-        backgroundColor: theme.palette.primary.main,
     },
     type: {
         marginLeft: theme.spacing(0.5),

@@ -10,6 +10,10 @@ export default defineMessages({
         id: 'password',
         defaultMessage: 'password'
     },
+    oldPassword: {
+        id: 'oldPassword',
+        defaultMessage: 'old password'
+    },
     registerMessage: {
         id: 'auth.login.registerMessage',
         defaultMessage: 'Don\'t have account?'
@@ -40,7 +44,7 @@ export default defineMessages({
     },
     passwordConfirmation: {
         id: 'passwordConfirmation',
-        defaultMessage: 'password'
+        defaultMessage: 'password confirmation'
     },
     loginMessage: {
         id: 'auth.login.loginMessage',
@@ -64,7 +68,7 @@ export default defineMessages({
     },
     submit: {
         id: 'submit',
-        defaultMessage: 'submit course'
+        defaultMessage: 'submit'
     },
     coursePassword: {
         id: 'coursePassword',

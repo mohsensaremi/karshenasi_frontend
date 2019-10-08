@@ -8,7 +8,7 @@ import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import PersonIcon from '@material-ui/icons/Person';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import {Link} from 'react-router-dom';
-import Avatar from '@material-ui/core/Avatar';
+import Avatar from 'app/packages/profile/src/containers/Avatar';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
 
@@ -37,6 +37,8 @@ const Sidebar = (props) => {
         {
             value: "editProfile",
             icon: PersonIcon,
+            component: Link,
+            to: "/profile",
         },
         {
             value: "logout",
@@ -51,9 +53,7 @@ const Sidebar = (props) => {
                 <Typography component={Grid} container alignItems={"center"} justify={"center"} direction={"column"}>
                     <Avatar
                         className={classes.avatar}
-                    >
-                        {`${me.get('firstName')[0]} ${me.get('lastName')[0]}`}
-                    </Avatar>
+                    />
                     <Typography>
                         {`${me.get('firstName')} ${me.get('lastName')}`}
                         <Typography className={classes.type} display={"inline"} component={"span"}>
