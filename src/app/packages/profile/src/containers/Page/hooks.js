@@ -40,19 +40,23 @@ export default (props) => {
     };
 
     const onSubmitAvatar = (blob, {onClose}) => {
-        return onSubmitAvatarOrCover(blob, '/update-avatar').then((res) => {
-            if (res && res.data) {
-                onClose();
-            }
-        });
+        if (blob) {
+            return onSubmitAvatarOrCover(blob, '/update-avatar').then((res) => {
+                if (res && res.data) {
+                    onClose();
+                }
+            });
+        }
     };
 
     const onSubmitCover = (blob, {onClose}) => {
-        return onSubmitAvatarOrCover(blob, '/update-cover').then((res) => {
-            if (res && res.data) {
-                onClose();
-            }
-        });
+        if (blob) {
+            return onSubmitAvatarOrCover(blob, '/update-cover').then((res) => {
+                if (res && res.data) {
+                    onClose();
+                }
+            });
+        }
     };
 
     const openCropperDialogAvatar = () => openDialog('cropper', {

@@ -23,18 +23,21 @@ export default (WrappedComponent) => {
                 type,
             } = this.props;
 
-            this.setState({submitting: true});
+            if (this.cropper) {
+                this.setState({submitting: true});
 
-            this.cropper.getCroppedCanvas({
-                fillColor: '#fff',
-                imageSmoothingEnabled: false,
-                imageSmoothingQuality: 'high',
-                ...canvasOptions
-            }).toBlob((blob) => {
-                return onSubmit(blob, {onClose, type}).finally(() => {
-                    this.setState({submitting: false});
+                this.cropper.getCroppedCanvas({
+                    fillColor: '#fff',
+                    imageSmoothingEnabled: false,
+                    imageSmoothingQuality: 'high',
+                    ...canvasOptions
+                }).toBlob((blob) => {
+                    return onSubmit(blob, {onClose, type}).finally(() => {
+                        this.setState({submitting: false});
+                    });
                 });
-            });
+            }
+            return onSubmit(null, {onClose, type});
         };
 
         onSelectImage = (arg) => {
