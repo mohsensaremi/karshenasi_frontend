@@ -4,4 +4,7 @@ export default withStyles(theme => ({
     dialogActions: {
         justifyContent: 'space-between',
     },
+    membersTable: {
+        marginTop: theme.spacing(),
+    },
 }));

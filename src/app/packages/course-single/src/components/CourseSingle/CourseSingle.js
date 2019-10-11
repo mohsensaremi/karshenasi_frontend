@@ -17,6 +17,7 @@ import PostList from 'app/packages/post/src/containers/List';
 import {SetGlobalState} from 'packages/global-state';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
+import Members from "../../containers/Members";
 
 const CourseSingle = (props) => {
 
@@ -30,6 +31,7 @@ const CourseSingle = (props) => {
         data,
         match,
         activeTab,
+        isOwner,
         intl: {formatMessage},
     } = props;
 
@@ -83,35 +85,45 @@ const CourseSingle = (props) => {
                     </Grid>
                 </Grid>
                 <Collapse in={detailExpand}>
-                    <table className={`table table-bordered table-hover ${classes.table}`}>
-                        <tr>
-                            <td>
-                                <Typography className={classes.tableTitle}>
-                                    {formatMessage(messages.instructor)}
-                                </Typography>
-                            </td>
-                            <td>
-                                <Typography
-                                    component={Link}
-                                    to={`/instructor/${user.id}`}
-                                >
-                                    <Grid container alignItems={"center"}>
-                                        <Avatar
-                                            className={classes.avatar}
-                                        >
-                                            {`${user.firstName[0]} ${user.lastName[0]}`}
-                                        </Avatar>
-                                        <Typography
-                                            className={classes.userName}
-                                            display={"inline"}
-                                        >
-                                            {`${user.firstName} ${user.lastName}`}
+                    {
+                        isOwner ? (
+                            <Members
+                                classes={{
+                                    table: classes.table,
+                                }}
+                            />
+                        ) : (
+                            <table className={`table table-bordered table-hover ${classes.table}`}>
+                                <tr>
+                                    <td>
+                                        <Typography className={classes.tableTitle}>
+                                            {formatMessage(messages.instructor)}
                                         </Typography>
-                                    </Grid>
-                                </Typography>
-                            </td>
-                        </tr>
-                    </table>
+                                    </td>
+                                    <td>
+                                        <Typography
+                                            component={Link}
+                                            to={`/instructor/${user.id}`}
+                                        >
+                                            <Grid container alignItems={"center"}>
+                                                <Avatar
+                                                    className={classes.avatar}
+                                                >
+                                                    {`${user.firstName[0]} ${user.lastName[0]}`}
+                                                </Avatar>
+                                                <Typography
+                                                    className={classes.userName}
+                                                    display={"inline"}
+                                                >
+                                                    {`${user.firstName} ${user.lastName}`}
+                                                </Typography>
+                                            </Grid>
+                                        </Typography>
+                                    </td>
+                                </tr>
+                            </table>
+                        )
+                    }
                 </Collapse>
                 <div className={classes.tabWrapper}>
                     <Tabs/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import TextField from 'utils/redux-form/TextField';
 import Switch from 'utils/redux-form/Switch';
 import DateTimePicker from 'utils/redux-form/DateTimePicker';
@@ -14,7 +15,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import {Field} from "redux-form";
 import Members from "app/packages/course-single/src/containers/Members";
-import TableCell from '@material-ui/core/TableCell';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
 import capitalize from 'lodash/capitalize';
@@ -123,17 +123,28 @@ const SubmitDialog = (props) => {
                 </div>
                 <div style={{display: tab === "members" ? "block" : "none"}}>
                     <Members
+                        classes={{
+                            table: classes.membersTable,
+                        }}
                         extraHead={(
-                            <TableCell>
+                            <td>
                                 {
-                                    type === "attendance" ? formatMessage(messages.postSubmitDialogAttendance) : (
-                                        type === "grade" ? formatMessage(messages.postSubmitDialogGrade) : ""
+                                    type === "attendance" ? (
+                                        <Typography>
+                                            {formatMessage(messages.postSubmitDialogAttendance)}
+                                        </Typography>
+                                    ) : (
+                                        type === "grade" ? (
+                                            <Typography>
+                                                {formatMessage(messages.postSubmitDialogGrade)}
+                                            </Typography>
+                                        ) : ""
                                     )
                                 }
-                            </TableCell>
+                            </td>
                         )}
                         extraBody={row => (
-                            <TableCell>
+                            <td>
                                 {
                                     type === "attendance" ? (
                                         <Field
@@ -159,7 +170,7 @@ const SubmitDialog = (props) => {
                                         ) : null
                                     )
                                 }
-                            </TableCell>
+                            </td>
                         )}
                     />
                 </div>

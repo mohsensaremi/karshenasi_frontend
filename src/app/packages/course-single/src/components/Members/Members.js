@@ -1,10 +1,6 @@
 import React from 'react';
 import Loading1 from 'packages/loading/src/components/Loading1';
-import Table from '@material-ui/core/Table';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import TableBody from '@material-ui/core/TableBody';
+import Typography from '@material-ui/core/Typography';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
 
@@ -28,28 +24,34 @@ const Members = (props) => {
     } else if (fetch.fulfilled) {
         return (
             <div className={classes.root}>
-                <Table className={classes.table}>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>{formatMessage(messages.name)}</TableCell>
-                            {
-                                extraHead
-                            }
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {fetch.value.data.map(row => (
-                            <TableRow key={row.id}>
-                                <TableCell component="th" scope="row">
+                <table className={`table table-bordered table-hover ${classes.table}`}>
+                    <thead>
+                    <tr>
+                        <td>
+                            <Typography>
+                                {formatMessage(messages.name)}
+                            </Typography>
+                        </td>
+                        {
+                            extraHead
+                        }
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {fetch.value.data.map(row => (
+                        <tr key={row.id}>
+                            <td>
+                                <Typography>
                                     {`${row.firstName} ${row.lastName}`}
-                                </TableCell>
-                                {
-                                    typeof extraBody === "function" && extraBody(row)
-                                }
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
+                                </Typography>
+                            </td>
+                            {
+                                typeof extraBody === "function" && extraBody(row)
+                            }
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
             </div>
         );
     }
