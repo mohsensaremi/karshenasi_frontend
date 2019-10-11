@@ -9,6 +9,7 @@ import CourseSingle from 'app/packages/course-single/src/renderes/CourseSingle';
 import Instructor from 'app/packages/instructor/src/renderes/Instructor';
 import Calendar from 'app/packages/calendar/src/containers/Page';
 import Profile from 'app/packages/profile/src/containers/Page';
+import PostDetailDialog from 'app/packages/post/src/containers/DetailDialog';
 import {StickyContainer, Sticky} from 'react-sticky';
 
 const MainRouter = (props) => {
@@ -56,6 +57,7 @@ const MainRouter = (props) => {
                                 </Grid>
                             </StickyContainer>
                         </div>
+                        <PostDetailDialog/>
                     </React.Fragment>
                 )
             }

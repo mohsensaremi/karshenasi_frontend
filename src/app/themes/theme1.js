@@ -1,5 +1,6 @@
 import {createMuiTheme} from '@material-ui/core/styles';
 import pink from '@material-ui/core/colors/pink';
+import purple from '@material-ui/core/colors/purple';
 import {locale} from 'utils/utils/locale';
 
 let theme = createMuiTheme({
@@ -10,7 +11,7 @@ let theme = createMuiTheme({
             contrastText: '#fff',
         },
         secondary: {
-            main: pink['A400'],
+            main: purple['700'],
             contrastText: '#fff',
         },
     },

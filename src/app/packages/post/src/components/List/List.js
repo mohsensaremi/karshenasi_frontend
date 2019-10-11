@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Item from '../../containers/Item';
 import SubmitDialog from '../../containers/SubmitDialog';
-import DetailDialog from '../../containers/DetailDialog';
 import Loading1 from "packages/loading/src/components/Loading1";
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
@@ -127,7 +126,6 @@ const List = (props) => {
             <SubmitDialog
                 onSuccess={onSubmitSuccess}
             />
-            <DetailDialog/>
         </div>
     );
 };

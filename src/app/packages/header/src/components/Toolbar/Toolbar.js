@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import logo from 'img/logo-white-2.png';
 import {injectIntl, defineMessages} from "react-intl";
+import NotificationButton from 'app/packages/notification/src/containers/Button';
 
 const messages = defineMessages({
     title: {
@@ -37,6 +38,7 @@ const Toolbar = (props) => {
                     />
                     {formatMessage(messages.title)}
                 </Typography>
+                <NotificationButton/>
             </MuiToolbar>
         </AppBar>
     );

@@ -198,4 +198,8 @@ export default defineMessages({
         id: 'uploadButtonText',
         defaultMessage: 'choose file'
     },
+    unknownNotification: {
+        id: 'unknownNotification',
+        defaultMessage: 'unknown notification'
+    },
 });
