@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from 'utils/redux-form/TextField';
+import Switch from 'utils/redux-form/Switch';
 import DateTimePicker from 'utils/redux-form/DateTimePicker';
 import Checkbox from 'utils/redux-form/Checkbox';
 import Uploader from 'utils/redux-form/Uploader';
@@ -17,10 +18,13 @@ import TableCell from '@material-ui/core/TableCell';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
 import capitalize from 'lodash/capitalize';
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const SubmitDialog = (props) => {
 
     const {
+        classes,
         submitting,
         onSubmit,
         handleSubmit,
@@ -31,6 +35,7 @@ const SubmitDialog = (props) => {
         setTab,
         onEnter,
         membersLoading,
+        isEdit,
         intl: {formatMessage},
     } = props;
 
@@ -159,7 +164,26 @@ const SubmitDialog = (props) => {
                     />
                 </div>
             </DialogContent>
-            <DialogActions>
+            <DialogActions
+                classes={{
+                    root: isEdit && classes.dialogActions,
+                }}
+            >
+                {
+                    isEdit && (
+                        <FormGroup>
+                            <FormControlLabel
+                                control={(
+                                    <Field
+                                        component={Switch}
+                                        name={"sendUpdateNotification"}
+                                    />
+                                )}
+                                label={formatMessage(messages.sendUpdateNotification)}
+                            />
+                        </FormGroup>
+                    )
+                }
                 <Button
                     onClick={handleSubmit(onSubmit)}
                     color="primary"

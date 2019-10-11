@@ -9,7 +9,10 @@ export default connect(
     }),
     dispatch => ({
         openSubmitDialog: (initialValues) => {
-            dispatch(initialize("post", initialValues));
+            dispatch(initialize("post", {
+                ...initialValues,
+                sendUpdateNotification: true,
+            }));
             dispatch(open("post"));
         },
     })

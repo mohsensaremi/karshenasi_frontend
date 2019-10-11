@@ -28,7 +28,7 @@ export default withHandlers({
         }
     },
     onSubmit: ({postHttp, onClose, onSuccess, type, courseId}) => (data) => {
-        return postHttp('/post/submit', {...data, type, courseId}).then(res => {
+        return postHttp('/post/submit', {type, courseId, ...data}).then(res => {
             onClose();
             if (typeof onSuccess === 'function') {
                 onSuccess(res.data);

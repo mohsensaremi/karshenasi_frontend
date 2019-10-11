@@ -202,4 +202,8 @@ export default defineMessages({
         id: 'unknownNotification',
         defaultMessage: 'unknown notification'
     },
+    sendUpdateNotification: {
+        id: 'sendUpdateNotification',
+        defaultMessage: 'send update notification',
+    },
 });
