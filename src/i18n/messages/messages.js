@@ -206,4 +206,32 @@ export default defineMessages({
         id: 'sendUpdateNotification',
         defaultMessage: 'send update notification',
     },
+    alertDialogTitle: {
+        id: 'alertDialogTitle',
+        defaultMessage: 'ALERT',
+    },
+    alertDialogContent: {
+        id: 'alertDialogContent',
+        defaultMessage: 'Are you sure?',
+    },
+    alertDialogRejectButtonText: {
+        id: 'alertDialogRejectButtonText',
+        defaultMessage: 'NO',
+    },
+    alertDialogAcceptButtonText: {
+        id: 'alertDialogAcceptButtonText',
+        defaultMessage: 'YES',
+    },
+    ok: {
+        id: 'ok',
+        defaultMessage: 'OK',
+    },
+    cancel: {
+        id: 'cancel',
+        defaultMessage: 'cancel',
+    },
+    clear: {
+        id: 'clear',
+        defaultMessage: 'clear',
+    },
 });

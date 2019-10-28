@@ -8,6 +8,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
+import ButtonAlert from "utils/components/ButtonAlert/ButtonAlert";
 
 const Item = (props) => {
 
@@ -19,6 +20,8 @@ const Item = (props) => {
         openSubmitDialog,
         data,
         me,
+        onClickDelete,
+        loading,
         intl: {formatMessage},
     } = props;
 
@@ -50,11 +53,14 @@ const Item = (props) => {
                                     >
                                         <EditIcon/>
                                     </IconButton>
-                                    <IconButton
+                                    <ButtonAlert
+                                        component={IconButton}
                                         size={"small"}
+                                        onClick={onClickDelete}
+                                        disabled={loading}
                                     >
                                         <DeleteIcon/>
-                                    </IconButton>
+                                    </ButtonAlert>
                                 </Grid>
                             )
                         }

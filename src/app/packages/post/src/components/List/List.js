@@ -25,6 +25,7 @@ const List = (props) => {
         listFetch,
         onNextPage,
         hasNext,
+        onDeleteSuccess,
         intl: {formatMessage},
     } = props;
 
@@ -101,6 +102,7 @@ const List = (props) => {
                                 root: classes.item,
                             }}
                             openSubmitDialog={openSubmitDialog}
+                            onDeleteSuccess={() => onDeleteSuccess(item)}
                         />
                     );
                 })

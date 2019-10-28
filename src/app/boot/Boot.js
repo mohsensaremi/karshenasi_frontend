@@ -14,28 +14,30 @@ import {IntlProvider} from "react-intl";
 import translations from "i18n/locales";
 import {locale} from 'utils/utils/locale';
 
-jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
+if (locale === "fa") {
+    jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
+}
+
+document.dir = locale === "fa" ? "rtl" : "ltr";
 
 const Boot = () => {
 
     const messages = translations[locale];
 
     return (
-        <div dir={locale === "fa" ? "rtl" : "ltr"}>
-            <IntlProvider locale={locale} key={locale} messages={messages}>
-                <MuiPickersUtilsProvider utils={locale === "fa" ? JalaliUtils : MomentUtils} locale={locale}>
-                    <Provider store={store}>
-                        <RTL>
-                            <React.Fragment>
-                                <BrowserRouter>
-                                    <Router/>
-                                </BrowserRouter>
-                            </React.Fragment>
-                        </RTL>
-                    </Provider>
-                </MuiPickersUtilsProvider>
-            </IntlProvider>
-        </div>
+        <IntlProvider locale={locale} key={locale} messages={messages}>
+            <MuiPickersUtilsProvider utils={locale === "fa" ? JalaliUtils : MomentUtils} locale={locale}>
+                <Provider store={store}>
+                    <RTL>
+                        <React.Fragment>
+                            <BrowserRouter>
+                                <Router/>
+                            </BrowserRouter>
+                        </React.Fragment>
+                    </RTL>
+                </Provider>
+            </MuiPickersUtilsProvider>
+        </IntlProvider>
     );
 };
 

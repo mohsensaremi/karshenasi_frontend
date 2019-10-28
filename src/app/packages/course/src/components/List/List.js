@@ -29,6 +29,7 @@ const List = (props) => {
         showAddButton,
         settings,
         intl: {formatMessage},
+        onDeleteSuccess,
     } = props;
 
     return (
@@ -101,6 +102,7 @@ const List = (props) => {
                                         root: classes.item,
                                     }}
                                     openSubmitDialog={openSubmitDialog}
+                                    onDeleteSuccess={() => onDeleteSuccess(item)}
                                 />
                             </Grid>
                         );

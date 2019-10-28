@@ -8,4 +8,7 @@ export default withHandlers({
             pushFirstData(res.data);
         }
     },
+    onDeleteSuccess: ({deleteItemInData}) => (data) => {
+        deleteItemInData(data)
+    },
 })

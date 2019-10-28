@@ -11,6 +11,7 @@ import Avatar from '@material-ui/core/Avatar';
 import FaceIcon from '@material-ui/icons/Face';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
+import ButtonAlert from 'utils/components/ButtonAlert';
 
 const Item = (props) => {
 
@@ -27,6 +28,8 @@ const Item = (props) => {
         userIsOwner,
         isInstructor,
         openJoinDialog,
+        onClickDelete,
+        loading,
         intl: {formatMessage},
     } = props;
 
@@ -40,14 +43,18 @@ const Item = (props) => {
                             <IconButton
                                 size={"small"}
                                 onClick={() => openSubmitDialog(data)}
+                                disabled={loading}
                             >
                                 <EditIcon/>
                             </IconButton>
-                            < IconButton
+                            <ButtonAlert
+                                component={IconButton}
                                 size={"small"}
+                                onClick={onClickDelete}
+                                disabled={loading}
                             >
                                 <DeleteIcon/>
-                            </IconButton>
+                            </ButtonAlert>
                         </React.Fragment>
                     )
                 }

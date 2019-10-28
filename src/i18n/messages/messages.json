@@ -258,5 +258,40 @@
     "id": "sendUpdateNotification",
     "defaultMessage": "send update notification",
     "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "alertDialogTitle",
+    "defaultMessage": "ALERT",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "alertDialogContent",
+    "defaultMessage": "Are you sure?",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "alertDialogRejectButtonText",
+    "defaultMessage": "NO",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "alertDialogAcceptButtonText",
+    "defaultMessage": "YES",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "ok",
+    "defaultMessage": "OK",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "cancel",
+    "defaultMessage": "cancel",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "clear",
+    "defaultMessage": "clear",
+    "filepath": "src/i18n/messages/messages.js"
   }
 ]

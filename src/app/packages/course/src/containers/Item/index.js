@@ -4,10 +4,13 @@ import withMe from 'app/packages/auth/src/decorators/withMe';
 import withIsInstructor from 'app/packages/auth/src/decorators/withIsInstructor';
 import store from './store';
 import handlers from './handlers';
+import withPostHttp from 'app/network/withPostHttp';
 
 export default compose(
     withMe,
     withIsInstructor,
+    withPostHttp,
+    withState('loading', 'setLoading', false),
     withState('localData', 'setLocalData', props => props.data),
     lifecycle({
         componentDidUpdate(prevProps) {

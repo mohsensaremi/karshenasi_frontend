@@ -2,22 +2,26 @@ import {
     DatePicker,
 } from "@material-ui/pickers";
 import createComponent from './create-component';
+import {dateFormat} from "../utils/locale";
+import {injectIntl} from "react-intl";
+import messages from 'i18n/messages/messages';
 
-export default createComponent(DatePicker, ({
-                                                componentProps,
-                                                input: {value, onChange},
-                                                ...props
-                                            }) => {
+export default injectIntl(createComponent(DatePicker, ({
+                                                           intl: {formatMessage},
+                                                           componentProps,
+                                                           input: {value, onChange},
+                                                           ...props
+                                                       }) => {
     return {
         clearable: true,
         autoOk: true,
-        okLabel: "تأیید",
-        cancelLabel: "لغو",
-        clearLabel: "پاک کردن",
+        okLabel: formatMessage(messages.ok),
+        cancelLabel: formatMessage(messages.cancel),
+        clearLabel: formatMessage(messages.clear),
         ...componentProps,
         ...props,
-        labelFunc: date => date && date.isValid() ? date.format("jYYYY/jMM/jDD") : "",
+        labelFunc: date => date && date.isValid() ? date.format(dateFormat) : "",
         onChange,
         value: value || null,
     };
-});
+}));
