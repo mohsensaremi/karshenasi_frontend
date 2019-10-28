@@ -7,7 +7,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import PersonIcon from '@material-ui/icons/Person';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
-import {Link} from 'react-router-dom';
+import Link from 'utils/components/Link';
 import Avatar from 'app/packages/profile/src/containers/Avatar';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';

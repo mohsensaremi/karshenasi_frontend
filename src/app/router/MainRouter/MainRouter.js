@@ -11,6 +11,7 @@ import Calendar from 'app/packages/calendar/src/containers/Page';
 import Profile from 'app/packages/profile/src/containers/Page';
 import PostDetailDialog from 'app/packages/post/src/containers/DetailDialog';
 import {StickyContainer, Sticky} from 'react-sticky';
+import {localQueryString} from "utils/utils/locale";
 
 const MainRouter = (props) => {
 
@@ -51,7 +52,7 @@ const MainRouter = (props) => {
                                             <Route exact path={'/courses'} component={CourseList}/>
                                             <Route exact path={'/instructor/:id'} component={Instructor}/>
                                             <Route path={'/course/:id'} component={CourseSingle}/>
-                                            <Redirect to={"/courses"}/>
+                                            <Redirect to={`/courses${localQueryString}`}/>
                                         </Switch>
                                     </Grid>
                                 </Grid>

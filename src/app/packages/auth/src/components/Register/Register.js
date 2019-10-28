@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import {Link} from "react-router-dom";
+import Link from 'utils/components/Link';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
 import capitalize from 'lodash/capitalize';

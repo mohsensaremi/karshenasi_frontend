@@ -1,5 +1,6 @@
 import axios from 'axios';
 import urlJoin from 'url-join';
+import {localQueryString} from 'utils/utils/locale';
 
 let currentHttp = null;
 
@@ -16,7 +17,7 @@ export default function () {
                         window.localStorage.setItem(process.env.REACT_APP_ACCESS_TOKEN_NAME, res.data.token);
                         resolve(res.data.token);
                     } else {
-                        window.location.href = urlJoin(process.env.REACT_APP_URL, '/login');
+                        window.location.href = urlJoin(process.env.REACT_APP_URL, `/login${localQueryString}`);
                         window.localStorage.removeItem(process.env.REACT_APP_ACCESS_TOKEN_NAME);
                         reject(res);
                     }

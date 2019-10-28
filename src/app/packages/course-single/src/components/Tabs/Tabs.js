@@ -3,7 +3,7 @@ import MuiTabs from '@material-ui/core/Tabs';
 import Grid from '@material-ui/core/Grid';
 import Tab from '@material-ui/core/Tab';
 import SchoolIcon from '@material-ui/icons/School';
-import {Link} from 'react-router-dom';
+import Link from 'utils/components/Link';
 import {injectIntl} from "react-intl";
 import messages from 'i18n/messages/messages';
 
