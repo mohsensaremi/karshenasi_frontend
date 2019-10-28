@@ -1,7 +1,262 @@
 [
   {
-    "id": "app.title",
+    "id": "header.toolbar.title",
     "defaultMessage": "Learning management system",
     "filepath": "src/app/packages/header/src/components/Toolbar/Toolbar.js"
+  },
+  {
+    "id": "email",
+    "defaultMessage": "email",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "password",
+    "defaultMessage": "password",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "oldPassword",
+    "defaultMessage": "old password",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "auth.login.registerMessage",
+    "defaultMessage": "Don't have account?",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "register",
+    "defaultMessage": "register",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "firstName",
+    "defaultMessage": "first name",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "lastName",
+    "defaultMessage": "last name",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "user.type",
+    "defaultMessage": "type",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "student",
+    "defaultMessage": "student",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "instructor",
+    "defaultMessage": "instructor",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "passwordConfirmation",
+    "defaultMessage": "password confirmation",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "auth.login.loginMessage",
+    "defaultMessage": "Already have account?",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "login",
+    "defaultMessage": "login",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "enterCourse",
+    "defaultMessage": "enter course",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "joinCourse",
+    "defaultMessage": "join course",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "newCourse",
+    "defaultMessage": "new course",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "submit",
+    "defaultMessage": "submit",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "coursePassword",
+    "defaultMessage": "course password",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "search",
+    "defaultMessage": "search",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "dontHaveAnyCourse",
+    "defaultMessage": "you don't have any course",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "dontJoinAnyCourse",
+    "defaultMessage": "you don't join any course",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "loadMore",
+    "defaultMessage": "load more",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "searchCourseTitle",
+    "defaultMessage": "search course title",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "noDataFound",
+    "defaultMessage": "no data found",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "jointCourseWithPassword",
+    "defaultMessage": "joint this course requires password",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "title",
+    "defaultMessage": "title",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "name",
+    "defaultMessage": "name",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "fresh",
+    "defaultMessage": "fresh",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "alert",
+    "defaultMessage": "alert",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "assignment",
+    "defaultMessage": "assignment",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "attendance",
+    "defaultMessage": "attendance",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "project",
+    "defaultMessage": "project",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "grade",
+    "defaultMessage": "grade",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "details",
+    "defaultMessage": "details",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "newPost",
+    "defaultMessage": "new post",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "notPostOwner",
+    "defaultMessage": "you don't publish any post",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "notPostMember",
+    "defaultMessage": "no post published",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "postSubmitDialogTabGeneral",
+    "defaultMessage": "general",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "postSubmitDialogTabMembers",
+    "defaultMessage": "members",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "dueDate",
+    "defaultMessage": "due date",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "content",
+    "defaultMessage": "content",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "postSubmitDialogAttendance",
+    "defaultMessage": "attendance",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "postSubmitDialogGrade",
+    "defaultMessage": "grade",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "myCourses",
+    "defaultMessage": "my courses",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "calendar",
+    "defaultMessage": "calendar",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "editProfile",
+    "defaultMessage": "edit profile",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "logout",
+    "defaultMessage": "logout",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "uploadHint",
+    "defaultMessage": "drag here to upload file",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "uploadButtonText",
+    "defaultMessage": "choose file",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "unknownNotification",
+    "defaultMessage": "unknown notification",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "sendUpdateNotification",
+    "defaultMessage": "send update notification",
+    "filepath": "src/i18n/messages/messages.js"
   }
 ]
