@@ -123,7 +123,7 @@ const List = (props) => {
                         color={"primary"}
                         className={classes.button}
                     >
-                        formatMessage(messages.loadMore)
+                        {formatMessage(messages.loadMore)}
                     </Button>
                 )
             }
