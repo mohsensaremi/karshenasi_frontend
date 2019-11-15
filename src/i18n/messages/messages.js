@@ -234,4 +234,20 @@ export default defineMessages({
         id: 'clear',
         defaultMessage: 'clear',
     },
+    attendanceLabel: {
+        id: 'attendanceLabel',
+        defaultMessage: 'your attendance status',
+    },
+    attendancePresent: {
+        id: 'attendancePresent',
+        defaultMessage: 'present',
+    },
+    attendanceAbsent: {
+        id: 'attendanceAbsent',
+        defaultMessage: 'absent',
+    },
+    gradeLabel: {
+        id: 'gradeLabel',
+        defaultMessage: 'your grade',
+    },
 });

@@ -293,5 +293,25 @@
     "id": "clear",
     "defaultMessage": "clear",
     "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "attendanceLabel",
+    "defaultMessage": "your attendance status",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "attendancePresent",
+    "defaultMessage": "present",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "attendanceAbsent",
+    "defaultMessage": "absent",
+    "filepath": "src/i18n/messages/messages.js"
+  },
+  {
+    "id": "gradeLabel",
+    "defaultMessage": "your grade",
+    "filepath": "src/i18n/messages/messages.js"
   }
 ]
