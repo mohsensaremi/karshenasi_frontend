@@ -11,6 +11,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import {injectIntl} from "react-intl"
 import messages from 'i18n/messages/messages';
+import Members from "../../../../course-single/src/containers/Members";
+import {Field} from "redux-form";
+import Checkbox from "@material-ui/core/Checkbox";
 
 const DetailDialog = (props) => {
 
@@ -49,17 +52,61 @@ const DetailDialog = (props) => {
                     )
                 }
                 {
-                    attendance !== null && (
-                        <Typography
-                            className={classes.content}>{`${formatMessage(messages.attendanceLabel)}: ${attendance ? formatMessage(messages.attendancePresent) : formatMessage(messages.attendanceAbsent)}`}</Typography>
+                    (attendance !== null || grade !== null) && (
+                        <Members
+                            classes={{
+                                table: classes.membersTable,
+                            }}
+                            extraHead={(
+                                <td>
+                                    {
+                                        attendance !== null ? (
+                                            <Typography>
+                                                {formatMessage(messages.postSubmitDialogAttendance)}
+                                            </Typography>
+                                        ) : (
+                                            grade !== null ? (
+                                                <Typography>
+                                                    {formatMessage(messages.postSubmitDialogGrade)}
+                                                </Typography>
+                                            ) : ""
+                                        )
+                                    }
+                                </td>
+                            )}
+                            extraBody={row => (
+                                <td>
+                                    {
+                                        attendance !== null ? (
+                                            <Checkbox
+                                                readOnly
+                                                checked={!!attendance[row._id]}
+                                            />
+                                        ) : (
+                                            grade !== null && grade[row._id] ? (
+                                                <Typography>
+                                                    {grade[row._id]}
+                                                </Typography>
+                                            ) : null
+                                        )
+                                    }
+                                </td>
+                            )}
+                        />
                     )
                 }
-                {
-                    grade !== null && (
-                        <Typography
-                            className={classes.content}>{`${formatMessage(messages.gradeLabel)}: ${grade}`}</Typography>
-                    )
-                }
+                {/*{*/}
+                {/*    grade !== null && (*/}
+                {/*        <Typography*/}
+                {/*            className={classes.content}>{`${formatMessage(messages.gradeLabel)}: ${grade}`}</Typography>*/}
+                {/*    )*/}
+                {/*}*/}
+                {/*{*/}
+                {/*    attendance !== null && (*/}
+                {/*        <Typography*/}
+                {/*            className={classes.content}>{`${formatMessage(messages.attendanceLabel)}: ${attendance ? formatMessage(messages.attendancePresent) : formatMessage(messages.attendanceAbsent)}`}</Typography>*/}
+                {/*    )*/}
+                {/*}*/}
                 {
                     Array.isArray(files) && (
                         <List>
